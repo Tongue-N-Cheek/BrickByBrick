@@ -7,20 +7,6 @@ public class UserProfile : ScriptableObject
     public string userName;
     [Multiline] public string profileDescription;
 
-    public void SetUserName()
-    {
-        if (userNameDatabase != null)
-        {
-            userName = userNameDatabase.GetRandomUserName();
-        }
-    }
-
-    public string GetUserName()
-    {
-        if (string.IsNullOrEmpty(userName))
-        {
-            SetUserName();
-        }
-        return userName;
-    }
+    public string GetUserName() =>
+        string.IsNullOrEmpty(userName) ? userNameDatabase.GetRandomUserName() : userName;
 }

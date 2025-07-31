@@ -13,8 +13,11 @@ MonoBehaviour:
   m_Name: UserNameDatabase
   m_EditorClassIdentifier: 
   userNamePrefixes:
-  - prefix_
+  - prefix1_
+  - prefix2_
   userNameAffixes:
-  - affix_
+  - affix1_
+  - affix2_
   userNameSuffixes:
-  - suffix
+  - suffix1
+  - suffix2
