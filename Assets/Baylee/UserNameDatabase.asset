@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bca1b714a5932b1409abad744226a3ab, type: 3}
-  m_Name: ExGirlfriend
+  m_Script: {fileID: 11500000, guid: 342953ff36ec0ae48a6764fae5956bd5, type: 3}
+  m_Name: UserNameDatabase
   m_EditorClassIdentifier: 
-  userNameDatabase: {fileID: 0}
-  userName: amanda_queeen*
-  profileDescription: can we tempt u
+  userNamePrefixes: []
+  userNameAffixes: []
+  userNameSuffixes: []

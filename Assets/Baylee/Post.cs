@@ -1,4 +1,5 @@
 using UnityEngine;
+using System;
 
 [CreateAssetMenu(fileName = "Post", menuName = "Scriptable Objects/Post")]
 public class Post : ScriptableObject
@@ -12,10 +13,11 @@ public class Post : ScriptableObject
 
     public void CreateComments()
     {
-
+        
     }
 }
 
+[Serializable]
 public struct Commenter
 {
     public UserProfile commentingUser;
