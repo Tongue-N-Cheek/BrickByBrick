@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 #if UNITY_EDITOR
 using UnityEditor;
@@ -20,11 +19,6 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-    }
-
-    public void GoToScene(string sceneName)
-    {
-        SceneManager.LoadScene(sceneName);
     }
 
     public void Quit()
