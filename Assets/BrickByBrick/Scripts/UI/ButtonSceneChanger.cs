@@ -8,6 +8,6 @@ public class ButtonSceneChanger : MonoBehaviour
 
 	public void Start()
 	{
-		button.onClick.AddListener(() => SceneManager.GoToScene(sceneName));
+		button.onClick.AddListener(() => GameManager.Instance.GoToScene(sceneName));
 	}
 }
