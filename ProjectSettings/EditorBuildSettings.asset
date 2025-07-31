@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/BrickByBrick/Scenes/S_MainMenu.unity
     guid: b6e6d1035288a3630aff1294675b81f1
+  - enabled: 1
+    path: Assets/BrickByBrick/Scenes/S_Credits.unity
+    guid: 02118646287617c649a4a6f71685394c
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
