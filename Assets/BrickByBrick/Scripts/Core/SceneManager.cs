@@ -1,4 +1,4 @@
-public class SceneManager
+public static class SceneManager
 {
 	public static void GoToScene(string sceneName)
 	{
