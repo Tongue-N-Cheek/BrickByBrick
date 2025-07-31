@@ -6,7 +6,7 @@ public class ButtonSceneChanger : MonoBehaviour
 	public Button button;
 	public string sceneName;
 
-	public void Start()
+	public virtual void Start()
 	{
 		button.onClick.AddListener(() => GameManager.Instance.GoToScene(sceneName));
 	}

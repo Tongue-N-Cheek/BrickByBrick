@@ -30,11 +30,17 @@ public class GameManager : MonoBehaviour
 
 #pragma warning disable CS0618 // Type or member is obsolete
     public void GoToScene(string sceneName) {
-        GameState = sceneName == "S_Game" ? GameState.Playing : GameState.Menu;
-        isPaused = false;
+        GameState = GameState.Menu;
+        Unpause();
         SceneManager.GoToScene(sceneName);
     }
 #pragma warning restore CS0618 // Type or member is obsolete
+
+    public void Play()
+    {
+        GameState = GameState.Playing;
+        // TODO: start the algorithm
+    }
 
     public void TogglePause()
     {
