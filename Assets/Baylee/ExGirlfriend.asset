@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bca1b714a5932b1409abad744226a3ab, type: 3}
   m_Name: ExGirlfriend
   m_EditorClassIdentifier: 
-  userNameDatabase: {fileID: 0}
-  userName: amanda_queeen*
+  userNameDatabase: {fileID: 11400000, guid: 49ca2eaff8522cc4cbd68fa3e0df7683, type: 2}
+  userName: prefix_affix_suffix
   profileDescription: can we tempt u

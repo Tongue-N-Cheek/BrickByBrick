@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 342953ff36ec0ae48a6764fae5956bd5, type: 3}
   m_Name: UserNameDatabase
   m_EditorClassIdentifier: 
-  userNamePrefixes: []
-  userNameAffixes: []
-  userNameSuffixes: []
+  userNamePrefixes:
+  - prefix_
+  userNameAffixes:
+  - affix_
+  userNameSuffixes:
+  - suffix

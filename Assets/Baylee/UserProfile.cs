@@ -14,4 +14,13 @@ public class UserProfile : ScriptableObject
             userName = userNameDatabase.GetRandomUserName();
         }
     }
+
+    public string GetUserName()
+    {
+        if (string.IsNullOrEmpty(userName))
+        {
+            SetUserName();
+        }
+        return userName;
+    }
 }

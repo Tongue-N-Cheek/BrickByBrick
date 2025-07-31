@@ -5,16 +5,11 @@ using System;
 public class Post : ScriptableObject
 {
     public UserProfile userProfile;
-    public string[] postTags;
+    public Tags[] postTags;
     [Multiline] public string description;
     public Sprite postImage;
     public Commenter[] commenters;
     private bool isRepostedByPlayer = false;
-
-    public void CreateComments()
-    {
-        
-    }
 }
 
 [Serializable]
@@ -22,4 +17,20 @@ public struct Commenter
 {
     public UserProfile commentingUser;
     public string comment;
+}
+
+public enum Tags
+{
+    Aquarius,
+    Cat,
+    Jewelry,
+    Gym,
+    Crypto,
+    HumbleBrag,
+    Education,
+    Motivational,
+    AI,
+    Advertisement,
+    Brainrot,
+    Food
 }
