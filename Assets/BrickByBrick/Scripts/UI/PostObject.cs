@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class PostObject : MonoBehaviour
 {
 	[Tooltip("How fast the post moves to its desired position when scrolling")]
-	public float lambda = 0.5f;
+	public float lambda = 10f;
 
 	public Post Post { get; private set; }
 

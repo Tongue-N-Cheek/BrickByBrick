@@ -2,6 +2,8 @@ using UnityEngine;
 using UnityEngine.Audio;
 using System.Collections;
 using UnityEngine.UI;
+using System.Collections.Generic;
+using System.Linq;
 
 #if UNITY_EDITOR
 using UnityEditor;
@@ -11,6 +13,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
+    [field: SerializeField, Header("Data")]
+    public Post[] AllPosts { get; private set; }
     [field: SerializeField]
     public GameState GameState { get; private set; }
     [SerializeField, Header("Audio")]
@@ -21,6 +25,7 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private Post tempPostData;
 
+    private BossStage bossStage = BossStage.ExGirlfriend;
     private bool isPaused = false;
     private float maxPostTimer = 10f;
     private float postTimer = 10f;
@@ -113,11 +118,18 @@ public class GameManager : MonoBehaviour
         Debug.Log("End of posts");
     }
 
+    public void InteractWithCurrentPost()
+    {
+        Post post = postConstructor.GetCurrentPostObject().Post;
+        Algorithm.Interact(post, 1);
+    }
+
     private void Init()
     {
         Instance = this;
         DontDestroyOnLoad(gameObject);
         AudioManager.Init(mixer);
+        Algorithm.Init(AllPosts.ToList());
 
 #if UNITY_EDITOR
         if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "S_Game")
@@ -133,14 +145,17 @@ public class GameManager : MonoBehaviour
         GameState = GameState.Playing;
         postTimer = maxPostTimer;
         timerCoroutine = StartCoroutine(PostTimer());
-        postConstructor.BuildPost(tempPostData);
-        postConstructor.BuildPost(tempPostData);
-        // TODO: start the algorithm
+        List<Post> posts = Algorithm.GetPosts(bossStage);
+        foreach (Post post in posts)
+        {
+            postConstructor.BuildPost(post);
+        }
     }
 
     private IEnumerator PostTimer()
     {
         yield return new WaitForSeconds(maxPostTimer);
+        InteractWithCurrentPost();
         Scroll();
     }
 }
@@ -150,4 +165,11 @@ public enum GameState
     Menu,
     Playing,
     Paused
+}
+
+public enum BossStage
+{
+    ExGirlfriend,
+    CryptoBro,
+    CEO
 }

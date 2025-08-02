@@ -20,6 +20,7 @@ public struct Commenter
 
 public enum Tags
 {
+    Any,
     Astrology,
     Aquarius,
     Cat,
