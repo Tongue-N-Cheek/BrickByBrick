@@ -145,9 +145,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: da7e43cf4ddff534c8967c0f154390f2, type: 2}
   - {fileID: 11400000, guid: 00e181ff3815e78488c05d9011c622b1, type: 2}
   - {fileID: 11400000, guid: 14730381b9675b84081a9a52bc7ab7dd, type: 2}
+  tutorialPosts:
+  - {fileID: 11400000, guid: 04b25d3313d6d2c42ab8fb843391a24b, type: 2}
+  bossPosts:
+  - {fileID: 11400000, guid: 3aaa034ae75a4da499fd89246e4ac720, type: 2}
   <GameState>k__BackingField: 0
   mixer: {fileID: 24100000, guid: 390de776aad8e4949940057bd6ce6574, type: 2}
-  tempPostData: {fileID: 11400000, guid: 33aeb97ddeeb51c4e8dd6ac3327addb1, type: 2}
 --- !u!82 &150850019146344196
 AudioSource:
   m_ObjectHideFlags: 0

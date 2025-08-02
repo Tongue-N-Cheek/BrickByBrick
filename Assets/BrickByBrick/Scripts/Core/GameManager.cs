@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour
 
     [field: SerializeField, Header("Data")]
     public Post[] AllPosts { get; private set; }
+    public Post[] tutorialPosts;
+    public Post[] bossPosts;
     [field: SerializeField]
     public GameState GameState { get; private set; }
     [SerializeField, Header("Audio")]
@@ -22,14 +24,14 @@ public class GameManager : MonoBehaviour
 
     private PostConstructor postConstructor;
     private Image postTimerImage;
-    [SerializeField]
-    private Post tempPostData;
 
-    private BossStage bossStage = BossStage.ExGirlfriend;
+    private BossStage bossStage = BossStage.Tutorial;
     private bool isPaused = false;
     private float maxPostTimer = 10f;
     private float postTimer = 10f;
+    private bool isTimerRunning = false;
     private Coroutine timerCoroutine;
+    private HashSet<Tags> repostedTags = new();
 
     public void Awake()
     {
@@ -45,7 +47,7 @@ public class GameManager : MonoBehaviour
 
     public void Update()
     {
-        if (GameState == GameState.Playing && postTimerImage != null)
+        if (GameState == GameState.Playing && postTimerImage != null && isTimerRunning)
         {
             postTimer -= Time.deltaTime;
             postTimerImage.fillAmount = postTimer / maxPostTimer;
@@ -109,8 +111,10 @@ public class GameManager : MonoBehaviour
     {
         postConstructor.Scroll();
         postTimer = maxPostTimer;
-        StopCoroutine(timerCoroutine);
-        timerCoroutine = StartCoroutine(PostTimer());
+        postTimerImage.fillAmount = 1f;
+        if (timerCoroutine != null) StopCoroutine(timerCoroutine);
+        isTimerRunning = !postConstructor.GetCurrentPostObject().Post.pausesTime;
+        if (isTimerRunning) timerCoroutine = StartCoroutine(PostTimer());
     }
 
     public void EndOfPosts()
@@ -118,10 +122,34 @@ public class GameManager : MonoBehaviour
         Debug.Log("End of posts");
     }
 
-    public void InteractWithCurrentPost()
+    public void InteractWithCurrentPost(int weightChange)
     {
         Post post = postConstructor.GetCurrentPostObject().Post;
-        Algorithm.Interact(post, 1);
+        Algorithm.Interact(post.postTags.ToList(), weightChange);
+    }
+
+    public void Repost()
+    {
+        Post post = postConstructor.GetCurrentPostObject().Post;
+        repostedTags.UnionWith(post.postTags);
+    }
+
+    public void OpenComments()
+    {
+        // TODO: Unhide comments UI
+    }
+
+    public void AdvanceStage()
+    {
+        if (bossStage == BossStage.CEO) throw new System.Exception("End of game");
+        bossStage++;
+
+        List<Post> posts = Algorithm.GetPosts(bossStage);
+        foreach (Post post in posts)
+        {
+            postConstructor.BuildPost(post);
+        }
+        postConstructor.BuildPost(bossPosts[0]);
     }
 
     private void Init()
@@ -143,19 +171,22 @@ public class GameManager : MonoBehaviour
     {
         yield return new WaitForSeconds(0f);
         GameState = GameState.Playing;
+        bossStage = BossStage.Tutorial;
         postTimer = maxPostTimer;
-        timerCoroutine = StartCoroutine(PostTimer());
-        List<Post> posts = Algorithm.GetPosts(bossStage);
-        foreach (Post post in posts)
+        // timerCoroutine = StartCoroutine(PostTimer());
+
+        foreach (Post post in tutorialPosts)
         {
             postConstructor.BuildPost(post);
         }
+
+        AdvanceStage();
     }
 
     private IEnumerator PostTimer()
     {
         yield return new WaitForSeconds(maxPostTimer);
-        InteractWithCurrentPost();
+        InteractWithCurrentPost(1);
         Scroll();
     }
 }
@@ -169,6 +200,7 @@ public enum GameState
 
 public enum BossStage
 {
+    Tutorial,
     ExGirlfriend,
     CryptoBro,
     CEO

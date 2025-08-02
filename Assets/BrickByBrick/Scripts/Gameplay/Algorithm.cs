@@ -1,13 +1,21 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEngine;
 
 public static class Algorithm
 {
-    public static List<WeightedPost> Posts { get; private set; }
+    public static List<WeightedTags> WeightedTags { get; private set; }
 
-    public static void Init(List<Post> posts) =>
-        Posts = posts.Select(post => new WeightedPost { post = post, weight = 3 }).ToList();
+    public static void Init(List<Post> posts)
+    {
+        HashSet<Tags> allTags = new();
+        foreach (Post post in posts)
+        {
+            allTags.UnionWith(post.postTags);
+        }
+        WeightedTags = new(allTags.Select(tag => new WeightedTags() {tag = tag, weight = 3}));
+    }
 
     public static List<Post> GetPosts(BossStage stage)
     {
@@ -52,29 +60,36 @@ public static class Algorithm
         throw new Exception("Unknown boss stage when attempting to get posts: " + stage);
     }
 
-    public static List<WeightedPost> GetPostsWithTag(Tags tag, List<Post> exclude = null)
+    public static List<Post> GetPostsWithTag(Tags tag, List<Post> exclude = null)
     {
         exclude ??= new List<Post>();
-        return Posts.Where(post =>
-            !exclude.Contains(post.post)
-            && (tag == Tags.Any || post.post.postTags.Contains(tag))
+        return GameManager.Instance.AllPosts.Where(post =>
+            !exclude.Contains(post)
+            && (tag == Tags.Any || post.postTags.Contains(tag))
         ).ToList();
     }
 
-    public static List<Post> SamplePosts(List<WeightedPost> posts, int amount)
+    public static List<Post> SamplePosts(List<Post> posts, int amount)
     {
         List<Post> result = new();
 
         for (int i = 0; i < amount; i++)
         {
-            float totalWeight = posts.Sum(post => post.weight);
+            List<WeightedTags> tags =
+                WeightedTags.Where(t => posts.Exists(post => post.postTags.Contains(t.tag))).ToList();
+
+            float totalWeight = tags.Sum(t => t.weight);
             totalWeight = UnityEngine.Random.Range(0, totalWeight);
-            WeightedPost post = posts.First(post =>
+            WeightedTags tag = tags.First(t =>
             {
-                totalWeight -= post.weight;
+                totalWeight -= t.weight;
                 return totalWeight <= 0;
             });
-            result.Add(post.post);
+
+            List<Post> filteredPosts = posts.Where(post => post.postTags.Contains(tag.tag)).ToList();
+            Post post = filteredPosts[UnityEngine.Random.Range(0, filteredPosts.Count)];
+
+            result.Add(post);
             posts.Remove(post);
         }
 
@@ -94,15 +109,21 @@ public static class Algorithm
         return result;
     }
 
-    public static void Interact(Post post, int weightChange)
+    public static void Interact(List<Tags> tags, int weightChange)
     {
-        WeightedPost postToChange = Posts.First(p => p.post == post);
-        postToChange.weight += weightChange;
+        foreach (Tags tag in tags)
+        {
+            WeightedTags weightedTag = WeightedTags.First(t => t.tag == tag);
+            WeightedTags.RemoveAll(t => t.tag == tag);
+            weightedTag.weight = Mathf.Max(weightedTag.weight + weightChange, 1);
+            WeightedTags.Add(weightedTag);
+            Debug.Log(tag + ": " + weightedTag.weight);
+        }
     }
 }
 
-public struct WeightedPost
+public struct WeightedTags
 {
-    public Post post;
+    public Tags tag;
     public int weight;
 }

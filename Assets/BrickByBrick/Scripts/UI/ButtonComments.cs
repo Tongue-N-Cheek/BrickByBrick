@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ButtonScroll : MonoBehaviour
+public class ButtonComments : MonoBehaviour
 {
 	public Button button;
 
@@ -9,8 +9,8 @@ public class ButtonScroll : MonoBehaviour
 	{
 		button.onClick.AddListener(() =>
 		{
-			GameManager.Instance.InteractWithCurrentPost(2);
-			GameManager.Instance.Scroll();
+			// GameManager.Instance.OpenComments();
+			GameManager.Instance.InteractWithCurrentPost(1);
 		});
 	}
 }
