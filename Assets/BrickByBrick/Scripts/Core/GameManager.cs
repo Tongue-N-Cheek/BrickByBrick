@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
 
     private PostConstructor postConstructor;
     private Image postTimerImage;
+    private MessagesPanel messagesPanel;
 
     private BossStage bossStage = BossStage.Tutorial;
     private bool isPaused = false;
@@ -106,6 +107,7 @@ public class GameManager : MonoBehaviour
 
     public void SetPostConstructor(PostConstructor postConstructor) => this.postConstructor = postConstructor;
     public void SetPostTimerImage(Image postTimerImage) => this.postTimerImage = postTimerImage;
+    public void SetMessagesPanel(MessagesPanel messagesPanel) => this.messagesPanel = messagesPanel;
 
     public void Scroll()
     {
@@ -132,6 +134,11 @@ public class GameManager : MonoBehaviour
     {
         Post post = postConstructor.GetCurrentPostObject().Post;
         repostedTags.UnionWith(post.postTags);
+    }
+
+    public void ToggleMessages()
+    {
+        messagesPanel.TogglePanel();
     }
 
     public void OpenComments()
