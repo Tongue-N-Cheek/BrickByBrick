@@ -18,17 +18,17 @@ public class PostConstructor : MonoBehaviour
     private List<PostObject> posts = new();
     private int currentPostIndex = 0;
 
-	public void Awake()
+    public void Awake()
     {
         UserNameDatabase = userNameDatabase;
     }
 
-	public void Start()
-	{
-		GameManager.Instance.SetPostConstructor(this);
-	}
+    public void Start()
+    {
+        GameManager.Instance.SetPostConstructor(this);
+    }
 
-	public static string GetRandomUserName() => UserNameDatabase.GetRandomUserName();
+    public static string GetRandomUserName() => UserNameDatabase.GetRandomUserName();
 
     public void BuildPost(Post post)
     {
@@ -42,8 +42,17 @@ public class PostConstructor : MonoBehaviour
         );
 
         postObject.SetPost(post);
+        postObject.SetDesiredPosition(postObject.transform.position);
 
         posts.Add(postObject);
+    }
 
+    public void Scroll()
+    {
+        currentPostIndex++;
+        foreach (PostObject post in posts)
+        {
+            post.SetDesiredPosition(post.transform.position + new Vector3(0, postSpacing, 0));
+        }
     }
 }

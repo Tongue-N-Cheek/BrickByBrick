@@ -45,8 +45,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c6e8ace855599cf38c8b33524971b31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <GameState>k__BackingField: 0
   mixer: {fileID: 24100000, guid: 390de776aad8e4949940057bd6ce6574, type: 2}
-  musicSource: {fileID: 150850019146344196}
+  tempPostData: {fileID: 11400000, guid: 33aeb97ddeeb51c4e8dd6ac3327addb1, type: 2}
 --- !u!82 &150850019146344196
 AudioSource:
   m_ObjectHideFlags: 0

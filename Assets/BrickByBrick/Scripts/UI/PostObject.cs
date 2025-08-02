@@ -4,6 +4,9 @@ using UnityEngine.UI;
 
 public class PostObject : MonoBehaviour
 {
+	[Tooltip("How fast the post moves to its desired position when scrolling")]
+	public float lambda = 0.5f;
+
 	public Post Post { get; private set; }
 
 	[SerializeField]
@@ -13,6 +16,17 @@ public class PostObject : MonoBehaviour
 	[SerializeField]
 	private TextMeshProUGUI description;
 
+	private Vector2 desiredPosition;
+
+	public void Update()
+	{
+		transform.position = Vector2.Lerp(
+			gameObject.transform.position,
+			desiredPosition,
+			1 - Mathf.Exp(-lambda * Time.deltaTime)
+		);
+	}
+
 	public void SetPost(Post post)
 	{
 		Post = post;
@@ -20,5 +34,10 @@ public class PostObject : MonoBehaviour
 		header.SetUsername(post.userProfile.userName);
 		postImage.sprite = post.postImage;
 		description.text = post.description;
+	}
+
+	public void SetDesiredPosition(Vector2 position)
+	{
+		desiredPosition = position;
 	}
 }

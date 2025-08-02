@@ -34,7 +34,8 @@ public class GameManager : MonoBehaviour
     }
 
 #pragma warning disable CS0618 // Type or member is obsolete
-    public void GoToScene(string sceneName) {
+    public void GoToScene(string sceneName)
+    {
         GameState = GameState.Menu;
         Unpause();
         SceneManager.GoToScene(sceneName);
@@ -43,10 +44,7 @@ public class GameManager : MonoBehaviour
 
     public void Play()
     {
-        GameState = GameState.Playing;
-        postConstructor.BuildPost(tempPostData);
-        postConstructor.BuildPost(tempPostData);
-        // TODO: start the algorithm
+        StartCoroutine(DelayedPlay());
     }
 
     public void TogglePause()
@@ -87,6 +85,11 @@ public class GameManager : MonoBehaviour
 
     public void SetPostConstructor(PostConstructor postConstructor) => this.postConstructor = postConstructor;
 
+    public void Scroll()
+    {
+        postConstructor.Scroll();
+    }
+
     private void Init()
     {
         Instance = this;
@@ -101,13 +104,14 @@ public class GameManager : MonoBehaviour
 #endif
     }
 
-#if UNITY_EDITOR
     private IEnumerator DelayedPlay()
     {
         yield return new WaitForSeconds(0f);
-        Play();
+        GameState = GameState.Playing;
+        postConstructor.BuildPost(tempPostData);
+        postConstructor.BuildPost(tempPostData);
+        // TODO: start the algorithm
     }
-#endif
 }
 
 public enum GameState

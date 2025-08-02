@@ -164,7 +164,7 @@ GameObject:
   - component: {fileID: 4684932265468914329}
   - component: {fileID: 6326311505595556574}
   m_Layer: 5
-  m_Name: Mask
+  m_Name: PostConstructor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

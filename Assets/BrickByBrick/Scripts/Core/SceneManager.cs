@@ -24,7 +24,7 @@ public static class SceneManager
 
 	public static void RemoveOverlayScene(string sceneName)
 	{
-		scenes.Remove(sceneName);
-		UnityEngine.SceneManagement.SceneManager.UnloadSceneAsync(sceneName);
+		bool didRemove = scenes.Remove(sceneName);
+		if (didRemove) UnityEngine.SceneManagement.SceneManager.UnloadSceneAsync(sceneName);
 	}
 }
