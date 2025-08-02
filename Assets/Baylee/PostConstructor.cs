@@ -1,36 +1,49 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 // Spawns and populates the next post
 public class PostConstructor : MonoBehaviour
 {
-    public UserNames userNameDatabase;
-    public UserProfile testUserProfile;
-    public Post postToConstruct;
-    public int totalNumberOfPosts;
+    public static UserNames UserNameDatabase;
 
-    void Start()
+    [SerializeField]
+    private UserNames userNameDatabase;
+    [SerializeField]
+    private PostObject postPrefab;
+    [SerializeField]
+    private Vector2 postOrigin = new(6f, -32f);
+    [SerializeField]
+    private float postSpacing = 64f + 540.64f; // 540.64f is the height of the post prefab
+
+    private List<PostObject> posts = new();
+    private int currentPostIndex = 0;
+
+	public void Awake()
     {
-        Debug.LogWarning("UserName: " + testUserProfile.GetUserName() + " || Description: " + testUserProfile.profileDescription);
-
-        BuildNextPost();
+        UserNameDatabase = userNameDatabase;
     }
 
-    public void BuildNextPost()
+	public void Start()
+	{
+		GameManager.Instance.SetPostConstructor(this);
+	}
+
+	public static string GetRandomUserName() => UserNameDatabase.GetRandomUserName();
+
+    public void BuildPost(Post post)
     {
-        if (postToConstruct == null)
-        {
-            Debug.LogError("AHHHHHH NO POST TO CONSTRUCT");
-            return;
-        }
+        PostObject postObject = Instantiate(
+            postPrefab,
+            gameObject.transform.position
+                - new Vector3(0, (posts.Count - currentPostIndex) * postSpacing, 0)
+                + new Vector3(postOrigin.x, postOrigin.y),
+            Quaternion.identity,
+            gameObject.transform
+        );
 
-        for (int i = 0; i < postToConstruct.commenters.Length; i++)
-        {
-            var commenter = postToConstruct.commenters[i];
-            string username = commenter.commentingUser == null
-                ? userNameDatabase.GetRandomUserName()
-                : commenter.commentingUser.GetUserName();
+        postObject.SetPost(post);
 
-            Debug.LogWarning("Commenter username: " + username + " || Comment: " + commenter.comment);
-        }
+        posts.Add(postObject);
+
     }
 }

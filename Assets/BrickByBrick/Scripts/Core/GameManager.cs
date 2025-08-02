@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Audio;
+using System.Collections;
 
 #if UNITY_EDITOR
 using UnityEditor;
@@ -13,6 +14,10 @@ public class GameManager : MonoBehaviour
     public GameState GameState { get; private set; }
     [SerializeField, Header("Audio")]
     private AudioMixer mixer;
+
+    private PostConstructor postConstructor;
+    [SerializeField]
+    private Post tempPostData;
 
     private bool isPaused = false;
 
@@ -39,6 +44,8 @@ public class GameManager : MonoBehaviour
     public void Play()
     {
         GameState = GameState.Playing;
+        postConstructor.BuildPost(tempPostData);
+        postConstructor.BuildPost(tempPostData);
         // TODO: start the algorithm
     }
 
@@ -78,12 +85,29 @@ public class GameManager : MonoBehaviour
 #endif
     }
 
+    public void SetPostConstructor(PostConstructor postConstructor) => this.postConstructor = postConstructor;
+
     private void Init()
     {
         Instance = this;
         DontDestroyOnLoad(gameObject);
         AudioManager.Init(mixer);
+
+#if UNITY_EDITOR
+        if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "S_Game")
+        {
+            StartCoroutine(DelayedPlay());
+        }
+#endif
     }
+
+#if UNITY_EDITOR
+    private IEnumerator DelayedPlay()
+    {
+        yield return new WaitForSeconds(0f);
+        Play();
+    }
+#endif
 }
 
 public enum GameState

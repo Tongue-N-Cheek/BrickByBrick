@@ -9,7 +9,6 @@ public class Post : ScriptableObject
     [Multiline] public string description;
     public Sprite postImage;
     public Commenter[] commenters;
-    private bool isRepostedByPlayer = false;
 }
 
 [Serializable]
