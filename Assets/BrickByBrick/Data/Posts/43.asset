@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17eef46343b5f9641bc27de74b3a8443, type: 3}
   m_Name: 43
   m_EditorClassIdentifier: 
-  userProfile: {fileID: 11400000, guid: 2370ed06dc6662f42a780733015493b8, type: 2}
+  userProfile: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
   postTags: 07000000
   description: 43 Humble Brag
   postImage: {fileID: 21300000, guid: 65eccc48788f4a84da4ab190c4ae82e8, type: 3}
   commenters: []
+  pausesTime: 0

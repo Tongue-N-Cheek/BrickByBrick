@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bca1b714a5932b1409abad744226a3ab, type: 3}
+  m_Name: CheesyNerd27
+  m_EditorClassIdentifier: 
+  profilePic: {fileID: 21300000, guid: a5917fa8a0f787649984233dadd8ca69, type: 3}
+  userName: CheesyNerd27
+  followerCount: 0
+  followingCount: 0
+  profileDescription: 

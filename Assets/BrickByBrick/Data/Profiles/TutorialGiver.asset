@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bca1b714a5932b1409abad744226a3ab, type: 3}
   m_Name: TutorialGiver
   m_EditorClassIdentifier: 
-  profilePic: {fileID: -1666977519757924501, guid: 133d00bbf9c68564396d85a9404fea1b, type: 3}
+  profilePic: {fileID: 21300000, guid: 5c6bafb0d3c0f8846a042500db37167e, type: 3}
   userName: XxTutorialGiverxX
   followerCount: 0
   followingCount: 0
