@@ -9,6 +9,7 @@ public class ButtonScroll : MonoBehaviour
 	{
 		button.onClick.AddListener(() =>
 		{
+			GameManager.Instance.Repost();
 			GameManager.Instance.InteractWithCurrentPost(2);
 			GameManager.Instance.Scroll();
 		});
