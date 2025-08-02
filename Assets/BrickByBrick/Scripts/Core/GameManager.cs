@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.Audio;
 using System.Collections;
+using UnityEngine.UI;
 
 #if UNITY_EDITOR
 using UnityEditor;
@@ -16,10 +17,14 @@ public class GameManager : MonoBehaviour
     private AudioMixer mixer;
 
     private PostConstructor postConstructor;
+    private Image postTimerImage;
     [SerializeField]
     private Post tempPostData;
 
     private bool isPaused = false;
+    private float maxPostTimer = 10f;
+    private float postTimer = 10f;
+    private Coroutine timerCoroutine;
 
     public void Awake()
     {
@@ -30,6 +35,15 @@ public class GameManager : MonoBehaviour
         else
         {
             Destroy(gameObject);
+        }
+    }
+
+    public void Update()
+    {
+        if (GameState == GameState.Playing && postTimerImage != null)
+        {
+            postTimer -= Time.deltaTime;
+            postTimerImage.fillAmount = postTimer / maxPostTimer;
         }
     }
 
@@ -84,10 +98,19 @@ public class GameManager : MonoBehaviour
     }
 
     public void SetPostConstructor(PostConstructor postConstructor) => this.postConstructor = postConstructor;
+    public void SetPostTimerImage(Image postTimerImage) => this.postTimerImage = postTimerImage;
 
     public void Scroll()
     {
         postConstructor.Scroll();
+        postTimer = maxPostTimer;
+        StopCoroutine(timerCoroutine);
+        timerCoroutine = StartCoroutine(PostTimer());
+    }
+
+    public void EndOfPosts()
+    {
+        Debug.Log("End of posts");
     }
 
     private void Init()
@@ -108,9 +131,17 @@ public class GameManager : MonoBehaviour
     {
         yield return new WaitForSeconds(0f);
         GameState = GameState.Playing;
+        postTimer = maxPostTimer;
+        timerCoroutine = StartCoroutine(PostTimer());
         postConstructor.BuildPost(tempPostData);
         postConstructor.BuildPost(tempPostData);
         // TODO: start the algorithm
+    }
+
+    private IEnumerator PostTimer()
+    {
+        yield return new WaitForSeconds(maxPostTimer);
+        Scroll();
     }
 }
 
