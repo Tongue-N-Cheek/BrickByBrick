@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: b8a04cf857010bf428eb11734505a162
+guid: cea4c8561b863d247b713db1de95253b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 544710443836288949
-    second: T_CountdownTimer_D_0
+      213: -6588768912100936030
+    second: T_Comment_Yellow_D_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: T_CountdownTimer_D_0
+      name: T_Comment_Yellow_D_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 1
-        height: 1
+        y: 6
+        width: 40
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5bfae4e33433f8700800000000000000
-      internalID: 544710443836288949
+      spriteID: 2a6361f459dff84a0800000000000000
+      internalID: -6588768912100936030
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      T_CountdownTimer_D_0: 544710443836288949
+      T_Comment_Yellow_D_0: -6588768912100936030
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

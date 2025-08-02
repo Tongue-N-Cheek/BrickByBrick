@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: b8a04cf857010bf428eb11734505a162
+guid: aa65bbb87773f544a9c26312bd7117ff
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 544710443836288949
-    second: T_CountdownTimer_D_0
+      213: 2450918068041823907
+    second: T_ProfileBackground_02_D_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: T_CountdownTimer_D_0
+      name: T_ProfileBackground_02_D_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1
-        height: 1
+        width: 112
+        height: 89
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5bfae4e33433f8700800000000000000
-      internalID: 544710443836288949
+      spriteID: 3a638335ff8630220800000000000000
+      internalID: 2450918068041823907
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      T_CountdownTimer_D_0: 544710443836288949
+      T_ProfileBackground_02_D_0: 2450918068041823907
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
