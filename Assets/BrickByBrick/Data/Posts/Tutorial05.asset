@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   userProfile: {fileID: 11400000, guid: 52a5cda208bc5274f80cd95d8b6e93a9, type: 2}
   postTags: 
-  description: Pay close attention to what they like to match them.
+  description: Pay close attention to what they like so you can DM them.
   postImage: {fileID: -1666977519757924501, guid: 133d00bbf9c68564396d85a9404fea1b, type: 3}
   commenters: []
   sanityChange: 0
