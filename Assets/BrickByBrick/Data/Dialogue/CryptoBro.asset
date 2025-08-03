@@ -42,18 +42,18 @@ MonoBehaviour:
     - Anyway bro, its not very often that I talk to someone with actual intelligence
     - So bro, I'm kinda curious, what do you do for fun?
     choices:
-    - choice: Bro, they're fantastic
-      responseLines:
-      - Nice bro, same here
-      score: 1
-      relatedTag: 5
-      minimumTagReposts: 3
     - choice: Market Research
       responseLines:
       - Thats cool bro, I respect the dedication
       score: 0
       relatedTag: 5
       minimumTagReposts: 1
+    - choice: Work out
+      responseLines:
+      - Nice bro, same here
+      score: 1
+      relatedTag: 5
+      minimumTagReposts: 3
     - choice: Gaming
       responseLines:
       - Gotcha bro, thats neat
@@ -70,18 +70,18 @@ MonoBehaviour:
       score: 2
       relatedTag: 6
       minimumTagReposts: 3
-    - choice: Not yet bro
-      responseLines:
-      - "That\u2019s alright bro, take your time"
-      score: -1
-      relatedTag: 6
-      minimumTagReposts: 1
     - choice: "ehh, I don\u2019t know bro, seems kinda fishy"
       responseLines:
       - "nahh bro, trust me it\u2019ll be the best financial decision of your life"
       score: -2
       relatedTag: 6
       minimumTagReposts: 0
+    - choice: Not yet bro
+      responseLines:
+      - "That\u2019s alright bro, take your time"
+      score: -1
+      relatedTag: 6
+      minimumTagReposts: 1
   success:
   - leadupLines:
     - 'I appreciate the talk bro '
