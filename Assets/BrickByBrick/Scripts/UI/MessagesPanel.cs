@@ -122,6 +122,8 @@ public class MessagesPanel : MonoBehaviour
 
 			yield return new WaitUntil(() => isChoiceMade);
 
+			GameManager.Instance.ChangeScore(section.choices[choiceIndex].score);
+
 			foreach (string line in shuffledChoices[choiceIndex].responseLines)
 			{
 				ShowMessage(line);
@@ -148,6 +150,8 @@ public class MessagesPanel : MonoBehaviour
 
 				if (section.choices.Length <= 0) continue;
 
+				// TODO: fix final boss dialogue (the only that has choices in the success section)
+
 				for (int i = 0; i < section.choices.Length; i++)
 				{
 					DialogueChoice choice = section.choices[i];
@@ -156,8 +160,6 @@ public class MessagesPanel : MonoBehaviour
 				}
 
 				yield return new WaitUntil(() => isChoiceMade);
-
-				GameManager.Instance.ChangeScore(section.choices[choiceIndex].score);
 
 				foreach (string line in section.choices[choiceIndex].responseLines)
 				{
