@@ -12,11 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17eef46343b5f9641bc27de74b3a8443, type: 3}
   m_Name: 43
   m_EditorClassIdentifier: 
-  userProfile: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
-  postTags: 07000000
-  description: 43 Humble Brag
+  userProfile: {fileID: 11400000, guid: 0cbf1063b23d7fe4dbbe712427e00e48, type: 2}
+  postTags: 070000000600000008000000
+  description: Keep an eye on them stocks!
   postImage: {fileID: 9030449064297037492, guid: 70f03e3ca06cbce46a4a9fde9b58a83b, type: 3}
-  commenters: []
+  commenters:
+  - commentingUser: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
+    comment: 'Which is better: Zachoin or Gymcoin?'
+  - commentingUser: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
+    comment: yo I like those odds bro
+  - commentingUser: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
+    comment: i'm not sure if that's true...
   sanityChange: -1
   pausesTime: 0
   isBossPost: 0

@@ -14,9 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   userProfile: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
   postTags: 05000000
-  description: 36 Gym
+  description: MONDAYS | HANG IN THERE
   postImage: {fileID: 4980160927968356686, guid: 680b4c5c50895794ea8ff68fde3d17a4, type: 3}
-  commenters: []
+  commenters:
+  - commentingUser: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
+    comment: cute!
+  - commentingUser: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
+    comment: same
   sanityChange: 3
   pausesTime: 0
   isBossPost: 0
