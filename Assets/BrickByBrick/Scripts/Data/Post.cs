@@ -4,7 +4,7 @@ using System;
 [CreateAssetMenu(fileName = "Post", menuName = "Scriptable Objects/Post")]
 public class Post : ScriptableObject
 {
-    public DialogueTree userProfile;
+    public UserProfile userProfile;
     public Tags[] postTags;
     [Multiline] public string description;
     public Sprite postImage;
@@ -17,7 +17,7 @@ public class Post : ScriptableObject
 [Serializable]
 public struct Commenter
 {
-    public DialogueTree commentingUser;
+    public UserProfile commentingUser;
     public string comment;
 }
 

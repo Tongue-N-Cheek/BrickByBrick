@@ -10,11 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bca1b714a5932b1409abad744226a3ab, type: 3}
-  m_Name: ExGirlfriend
+  m_Name: teethingums
   m_EditorClassIdentifier: 
   profilePic: {fileID: 0}
-  userName: amanda_queeeen
+  userName: teeth_in_gums
   followerCount: 0
   followingCount: 0
-  profileDescription: Heyyyyy, Im Girlboss Amanda, just living my life for myself
-    and my friendssss. January 21
+  profileDescription: Selfmade billionare. CEO of Looker.

@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour
     private Image postTimerImage;
     private MessagesPanel messagesPanel;
     private BrainrotMeter brainrotMeter;
+    private ProfilePanel profilePanel;
 
     private BossStage bossStage = BossStage.Tutorial;
     private bool isPaused = false;
@@ -114,6 +115,7 @@ public class GameManager : MonoBehaviour
     public void SetPostTimerImage(Image postTimerImage) => this.postTimerImage = postTimerImage;
     public void SetMessagesPanel(MessagesPanel messagesPanel) => this.messagesPanel = messagesPanel;
     public void SetBrainrotMeter(BrainrotMeter brainrotMeter) => this.brainrotMeter = brainrotMeter;
+    public void SetProfilePanel(ProfilePanel profilePanel) => this.profilePanel = profilePanel;
 
     public void Scroll()
     {
@@ -219,6 +221,7 @@ public class GameManager : MonoBehaviour
         bossScore = 0;
         repostedTags.Clear();
         postConstructor.EnableButtons();
+        profilePanel.SetProfile(bossPosts[(int)bossStage - 1].userProfile);
 
         List<Post> posts = Algorithm.GetPosts(bossStage);
         foreach (Post post in posts)
