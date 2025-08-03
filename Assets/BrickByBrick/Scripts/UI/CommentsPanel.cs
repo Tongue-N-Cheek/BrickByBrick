@@ -23,9 +23,14 @@ public class CommentsPanel : MonoBehaviour
 	public void OpenComments(string[] comments)
 	{
 		canvasGroup.alpha = 1f;
-		if (comments.Length >= 1) comment1.text = comments[0];
-		if (comments.Length >= 2) comment1.text = comments[1];
-		if (comments.Length >= 3) comment1.text = comments[2];
+
+		comment1.text = "";
+		comment2.text = "";
+        comment3.text = "";
+
+        if (comments.Length >= 1) comment1.text = comments[0];
+		if (comments.Length >= 2) comment2.text = comments[1];
+		if (comments.Length >= 3) comment3.text = comments[2];
 	}
 
 	public void CloseComments() => canvasGroup.alpha = 0f;
