@@ -13,10 +13,16 @@ MonoBehaviour:
   m_Name: 59
   m_EditorClassIdentifier: 
   userProfile: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
-  postTags: 06000000
-  description: 59 Crypto
+  postTags: 0600000007000000
+  description: Collecting symbols
   postImage: {fileID: 6397205450725860213, guid: 1b39fa4fb7b27db45b3dba0b29effb20, type: 3}
-  commenters: []
+  commenters:
+  - commentingUser: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
+    comment: sheeeeeeeeeesh
+  - commentingUser: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
+    comment: I wish I had that much
+  - commentingUser: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
+    comment: so humble you refer to them as "symbols"
   sanityChange: 0
   pausesTime: 0
   isBossPost: 0

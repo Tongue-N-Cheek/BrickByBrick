@@ -15,7 +15,7 @@ MonoBehaviour:
   userProfile: {fileID: 11400000, guid: 52a5cda208bc5274f80cd95d8b6e93a9, type: 2}
   postTags: 
   description: Pay close attention to what they like so you can DM them.
-  postImage: {fileID: -1666977519757924501, guid: 133d00bbf9c68564396d85a9404fea1b, type: 3}
+  postImage: {fileID: -5558612429598807337, guid: abd5255dd889c254b9548f6df9bc9435, type: 3}
   commenters: []
   sanityChange: 0
   pausesTime: 1

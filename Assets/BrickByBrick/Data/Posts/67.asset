@@ -13,8 +13,16 @@ MonoBehaviour:
   m_Name: 67
   m_EditorClassIdentifier: 
   userProfile: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
-  postTags: 08000000
-  description: 67 Education
-  postImage: {fileID: 21300000, guid: 65eccc48788f4a84da4ab190c4ae82e8, type: 3}
-  commenters: []
+  postTags: 0800000005000000
+  description: A healthy diet is all you need for this figure
+  postImage: {fileID: -2181946658732071006, guid: 25a5df70546c99844aec0531c6b560cc, type: 3}
+  commenters:
+  - commentingUser: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
+    comment: plsss, I've been trying to lose weight for so longggg
+  - commentingUser: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
+    comment: Isn't this just starving?
+  - commentingUser: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
+    comment: this is why I hate doctors
+  sanityChange: 0
   pausesTime: 0
+  isBossPost: 0

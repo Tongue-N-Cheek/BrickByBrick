@@ -13,10 +13,14 @@ MonoBehaviour:
   m_Name: 68
   m_EditorClassIdentifier: 
   userProfile: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
-  postTags: 08000000
-  description: 68 Education
+  postTags: 0800000001000000
+  description: something something star signs something something
   postImage: {fileID: -8513097487940064037, guid: 86e08d0c68202104aa12b7985d8a1568, type: 3}
-  commenters: []
+  commenters:
+  - commentingUser: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
+    comment: Did OP really type "something something"?
+  - commentingUser: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
+    comment: Really? Because my crystals are in their attack mode.
   sanityChange: 0
   pausesTime: 0
   isBossPost: 0

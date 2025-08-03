@@ -16,7 +16,7 @@ MonoBehaviour:
   postTags: 
   description: You can interact with posts by viewing them for a long time, reposting,
     or opening comments.
-  postImage: {fileID: -1666977519757924501, guid: 133d00bbf9c68564396d85a9404fea1b, type: 3}
+  postImage: {fileID: -5558612429598807337, guid: abd5255dd889c254b9548f6df9bc9435, type: 3}
   commenters: []
   sanityChange: 0
   pausesTime: 1

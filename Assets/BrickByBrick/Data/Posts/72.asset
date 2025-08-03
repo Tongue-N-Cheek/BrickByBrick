@@ -12,11 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17eef46343b5f9641bc27de74b3a8443, type: 3}
   m_Name: 72
   m_EditorClassIdentifier: 
-  userProfile: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
-  postTags: 08000000
-  description: 72 Education
-  postImage: {fileID: 21300000, guid: 65eccc48788f4a84da4ab190c4ae82e8, type: 3}
-  commenters: []
+  userProfile: {fileID: 11400000, guid: 2ee681668639cd349b68f851375920e5, type: 2}
+  postTags: 080000000a0000000c000000
+  description: When the humans are out of the loop.
+  postImage: {fileID: -6774468251244170121, guid: 519328791befa6145a45f73ed67f31a4, type: 3}
+  commenters:
+  - commentingUser: {fileID: 11400000, guid: 0caefd796bea033419400da1ad515707, type: 2}
+    comment: "Splendid work my boy. Yet another \u2018banger\u2019 as they say"
+  - commentingUser: {fileID: 11400000, guid: ca80c3934f7f2af4498119764a33be6f, type: 2}
+    comment: Not relatable or funny, generate again
+  - commentingUser: {fileID: 11400000, guid: 6b67c2b0399f2ad4ab51a811ced38ea6, type: 2}
+    comment: Clanka
   sanityChange: -3
   pausesTime: 0
   isBossPost: 0

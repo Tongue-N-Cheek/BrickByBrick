@@ -14,9 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   userProfile: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
   postTags: 06000000
-  description: 55 Crypto
+  description: A crudely made advertisement for zachoin,
   postImage: {fileID: 8861796030793686930, guid: 5411fdfe5d20a4943ab8606e68ac9927, type: 3}
-  commenters: []
+  commenters:
+  - commentingUser: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
+    comment: 'Take zaction and get on the ground floor of Zachoin here [link]'
+  - commentingUser: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
+    comment: seems promising.
+  - commentingUser: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
+    comment: Not missing the boat this time, already invested 2k.
   sanityChange: -1
   pausesTime: 0
   isBossPost: 0

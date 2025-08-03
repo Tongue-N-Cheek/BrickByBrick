@@ -12,11 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17eef46343b5f9641bc27de74b3a8443, type: 3}
   m_Name: 63
   m_EditorClassIdentifier: 
-  userProfile: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
-  postTags: 06000000
-  description: 63 Crypto
+  userProfile: {fileID: 11400000, guid: 5f062db241ed358408e3a04fe8fe5278, type: 2}
+  postTags: 060000000a0000000b000000
+  description: Get in on this amazing broppurtunity.
   postImage: {fileID: -6021822778059258355, guid: 1cdd3e47e5d261749bc14fcbaeaa4631, type: 3}
-  commenters: []
+  commenters:
+  - commentingUser: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
+    comment: Take Zachtion today bros
+  - commentingUser: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
+    comment: That link stole all of my information
+  - commentingUser: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
+    comment: Anyone who buys into this garbage deserves what they get
   sanityChange: -3
   pausesTime: 0
   isBossPost: 0

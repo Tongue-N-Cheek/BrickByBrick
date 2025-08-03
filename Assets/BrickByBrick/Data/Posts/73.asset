@@ -12,11 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17eef46343b5f9641bc27de74b3a8443, type: 3}
   m_Name: 73
   m_EditorClassIdentifier: 
-  userProfile: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
+  userProfile: {fileID: 11400000, guid: 0caefd796bea033419400da1ad515707, type: 2}
   postTags: 0a000000
-  description: 73 AI
+  description: This generative technology has captured my image splendidly. It shall
+    be the future of humanity.
   postImage: {fileID: 8150691947036538361, guid: a94febc80ad882947a829aba115dfe27, type: 3}
-  commenters: []
+  commenters:
+  - commentingUser: {fileID: 11400000, guid: 2ee681668639cd349b68f851375920e5, type: 2}
+    comment: Nice work, so lifelike.
+  - commentingUser: {fileID: 11400000, guid: 6b67c2b0399f2ad4ab51a811ced38ea6, type: 2}
+    comment: "If I had a nickel for every hand in that image, I\u2019d have 3 nickels,
+      which isn\u2019t a lot but its weird it happened thrice"
+  - commentingUser: {fileID: 11400000, guid: 6e2481419ce84f444b231a3b25949a54, type: 2}
+    comment: Beautiful piece!
   sanityChange: -1
   pausesTime: 0
   isBossPost: 0

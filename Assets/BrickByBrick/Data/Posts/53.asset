@@ -13,10 +13,16 @@ MonoBehaviour:
   m_Name: 53
   m_EditorClassIdentifier: 
   userProfile: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
-  postTags: 09000000
-  description: 53 Motivational
+  postTags: 090000000400000006000000
+  description: Materialism is freedom #sparkle #capitalism
   postImage: {fileID: 5563044800662445062, guid: efc3bd775c33f054eb13f0a11736688a, type: 3}
-  commenters: []
+  commenters:
+  - commentingUser: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
+    comment: CRYPTO!!! HELL YEAH!!!
+  - commentingUser: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
+    comment: Those chains look just like the ones my partner got me
+  - commentingUser: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
+    comment: this is hype
   sanityChange: 1
   pausesTime: 0
   isBossPost: 0

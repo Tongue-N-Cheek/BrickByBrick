@@ -14,9 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   userProfile: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
   postTags: 06000000
-  description: 56 Crypto
+  description: Capricoin
   postImage: {fileID: -4278228370691287147, guid: fcdb8cd760c6e414ea670e55160303f3, type: 3}
-  commenters: []
+  commenters:
+  - commentingUser: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
+    comment: ohhhh, I get. "Capricorn" and "Coin".
+  - commentingUser: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
+    comment: nvm, I still don't get it.
   sanityChange: -1
   pausesTime: 0
   isBossPost: 0

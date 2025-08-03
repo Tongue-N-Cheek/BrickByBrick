@@ -14,9 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   userProfile: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
   postTags: 06000000
-  description: 57 Crypto
+  description: To the moon! # crypto
   postImage: {fileID: 3337652853891768195, guid: 826962519efb57f43884801d20d5c991, type: 3}
-  commenters: []
+  commenters:
+  - commentingUser: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
+    comment: MOON MOON MOON
+  - commentingUser: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
+    comment: its still gonna crash, just on the moon
+  - commentingUser: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
+    comment: rugpull?
   sanityChange: -1
   pausesTime: 0
   isBossPost: 0

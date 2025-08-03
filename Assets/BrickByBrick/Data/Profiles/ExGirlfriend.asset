@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bca1b714a5932b1409abad744226a3ab, type: 3}
   m_Name: ExGirlfriend
   m_EditorClassIdentifier: 
-  profilePic: {fileID: 0}
+  profilePic: {fileID: 21300000, guid: 185c768e9d7397540ac331ca9a82ddf8, type: 3}
   userName: amanda_queeeen
   followerCount: 0
   followingCount: 0
