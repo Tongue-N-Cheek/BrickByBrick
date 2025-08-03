@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   userProfile: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
   postTags: 0a00000007000000
-  description: 76 AI
+  description: Just got a promotion at work. Thanks for all the thanks. This image
+    is so me rn.
   postImage: {fileID: -7561372317519875207, guid: 21b625f50f67ef345b32cbd96ebfe22a, type: 3}
   commenters:
   - commentingUser: {fileID: 11400000, guid: 5f062db241ed358408e3a04fe8fe5278, type: 2}

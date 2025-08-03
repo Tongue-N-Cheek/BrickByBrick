@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   userProfile: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
   postTags: 0a00000001000000
-  description: 77 AI
+  description: Tag your zodiac. Are you Dragon or Sheep
   postImage: {fileID: 7130811209736034648, guid: 79a6ba5ffaa546348acd397eea6da497, type: 3}
   commenters:
   - commentingUser: {fileID: 11400000, guid: 2370ed06dc6662f42a780733015493b8, type: 2}

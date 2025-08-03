@@ -14,9 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   userProfile: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
   postTags: 0b00000005000000
-  description: 85 Advertisement
+  description: use code #gymbro for ur 1st month free
   postImage: {fileID: 6437064168166761608, guid: 2ec5a9bd6558ad344bbe367279f85864, type: 3}
-  commenters: []
+  commenters:
+  - commentingUser: {fileID: 11400000, guid: afa6a3298e3794d49baafa0e1385249b, type: 2}
+    comment: Jim is this a scam?
+  - commentingUser: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
+    comment: Do u even lift bro
+  - commentingUser: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
+    comment: how much can you bench rn?
   sanityChange: 0
   pausesTime: 0
   isBossPost: 0

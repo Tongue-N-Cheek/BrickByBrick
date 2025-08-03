@@ -14,9 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   userProfile: {fileID: 11400000, guid: bdf52e07ef82e034488485ecfd4b378d, type: 2}
   postTags: 0b0000000a00000008000000
-  description: 90 Advertisement
+  description: 1000/10 dentists recommend illegible toothpaste brand. The toothpaste
+    is falling off of the brush
   postImage: {fileID: -742928206124183092, guid: a569bd1e49f8f6545ae419a2f8d05385, type: 3}
-  commenters: []
+  commenters:
+  - commentingUser: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
+    comment: So true, I love you CC
+  - commentingUser: {fileID: 11400000, guid: 6e2481419ce84f444b231a3b25949a54, type: 2}
+    comment: Too many dentists for my liking
+  - commentingUser: {fileID: 11400000, guid: 6b67c2b0399f2ad4ab51a811ced38ea6, type: 2}
+    comment: This looks AI to me
   sanityChange: -3
   pausesTime: 0
   isBossPost: 0

@@ -14,9 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   userProfile: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
   postTags: 0c00000005000000
-  description: 94 Brainrot
+  description: arms and chest day be like
   postImage: {fileID: -6704124904687267290, guid: 96c88f5ec52f81a4694dcda889167a22, type: 3}
-  commenters: []
+  commenters:
+  - commentingUser: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
+    comment: Is that a frog?
+  - commentingUser: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
+    comment: "I\u2019d like to unsee this"
+  - commentingUser: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
+    comment: haha nice
   sanityChange: 0
   pausesTime: 0
   isBossPost: 0

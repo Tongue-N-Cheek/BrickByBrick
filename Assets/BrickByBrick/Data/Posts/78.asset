@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   userProfile: {fileID: 11400000, guid: 5f062db241ed358408e3a04fe8fe5278, type: 2}
   postTags: 0a00000006000000
-  description: 78 AI
+  description: Zachoin is the future. It expands minds and wallets.
   postImage: {fileID: 2978744177805515716, guid: 9ed689dbe38ec414d94bcae0123b2821, type: 3}
   commenters:
   - commentingUser: {fileID: 11400000, guid: 0cbf1063b23d7fe4dbbe712427e00e48, type: 2}

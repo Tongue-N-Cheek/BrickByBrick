@@ -14,9 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   userProfile: {fileID: 11400000, guid: 6b67c2b0399f2ad4ab51a811ced38ea6, type: 2}
   postTags: 0c000000
-  description: 91 Brainrot
+  description: Game development during a game jam be like.
   postImage: {fileID: -414975301581219949, guid: 5395408e5f254ac4e8ee84d3a167bc92, type: 3}
-  commenters: []
+  commenters:
+  - commentingUser: {fileID: 11400000, guid: 3b1e33a76457a0b4cbfa3fadb01d968a, type: 2}
+    comment: Real
+  - commentingUser: {fileID: 11400000, guid: 0c2ccee964de7b64fadccf066217293b, type: 2}
+    comment: Real
+  - commentingUser: {fileID: 11400000, guid: 225db64bab3ae2744be54940a41e0721, type: 2}
+    comment: Real
   sanityChange: -1
   pausesTime: 0
   isBossPost: 0

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   userProfile: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
   postTags: 0b000000
-  description: 84 Advertisement
+  description: Be a part of something greater
   postImage: {fileID: 1201609641859394601, guid: 02033f2c69176b9498198ebe98a12587, type: 3}
   commenters:
   - commentingUser: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}

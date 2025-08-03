@@ -14,9 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   userProfile: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
   postTags: 0c000000060000000b000000
-  description: 99 Brainrot
+  description: Even death understands the value of Crypto
   postImage: {fileID: 21300000, guid: 65eccc48788f4a84da4ab190c4ae82e8, type: 3}
-  commenters: []
+  commenters:
+  - commentingUser: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
+    comment: So true
+  - commentingUser: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
+    comment: My crypto will be with me to the grave
+  - commentingUser: {fileID: 11400000, guid: 5f062db241ed358408e3a04fe8fe5278, type: 2}
+    comment: '#ZachNation4Life #ZachNation4Eva'
   sanityChange: -3
   pausesTime: 0
   isBossPost: 0

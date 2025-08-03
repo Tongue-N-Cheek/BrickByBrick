@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   userProfile: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
   postTags: 0b000000
-  description: 82 Advertisement
+  description: 1 kg of caffeine, 30 days of energy, 7 day coma after
   postImage: {fileID: 1585682601964385751, guid: 787b4adbbf14aca4c98d8f5152fa01dd, type: 3}
   commenters:
   - commentingUser: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
