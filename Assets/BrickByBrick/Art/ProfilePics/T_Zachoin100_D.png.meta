@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 6c0a9971f5f91164d864c3062dff8d59
+guid: e126fa6c0d1c88344ab5145948d769db
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5440650472634560874
-    second: T_HayleeHazel_D_0
+      213: 8338329563312960166
+    second: T_Zachoin100_D_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -101,7 +101,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: T_HayleeHazel_D_0
+      name: T_Zachoin100_D_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 14
-        height: 14
+        width: 15
+        height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 69e4e8f883dee74b0800000000000000
-      internalID: -5440650472634560874
+      spriteID: 6a238693f82b7b370800000000000000
+      internalID: 8338329563312960166
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      T_HayleeHazel_D_0: -5440650472634560874
+      T_Zachoin100_D_0: 8338329563312960166
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
