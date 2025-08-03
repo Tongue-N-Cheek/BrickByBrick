@@ -31,7 +31,7 @@ public class PostObject : MonoBehaviour
 	{
 		Post = post;
 		header.SetProfilePic(post.userProfile.profilePic);
-		header.SetUsername(post.userProfile.userName);
+		header.SetUsername(post.userProfile.GetUserName());
 		postImage.sprite = post.postImage;
 		description.text = post.description;
 	}
