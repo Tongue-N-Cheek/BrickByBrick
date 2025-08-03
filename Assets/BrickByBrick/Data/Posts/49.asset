@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   userProfile: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
   postTags: 09000000
-  description: 49 Motivational
+  description: '#keepcalm #workoutmotivation'
   postImage: {fileID: 8627132217101252609, guid: 35568483c83c7ee49818ce1d6cee8709, type: 3}
   commenters: []
   sanityChange: 0

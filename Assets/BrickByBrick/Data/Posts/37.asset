@@ -14,9 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   userProfile: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
   postTags: 07000000
-  description: 37 Humble Brag
+  description: ' This is the power of Zachoin. First the seas, then the moon'
   postImage: {fileID: -5538892632774375386, guid: 83f4f1d1867429046bed9e8ccad758a1, type: 3}
-  commenters: []
+  commenters:
+  - commentingUser: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
+    comment: You named your yacht The Zacht?
+  - commentingUser: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
+    comment: I respect the grind, but please change your naming scheme.
+  - commentingUser: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
+    comment: I respect the grind, but please change your naming scheme.
+  - commentingUser: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
+    comment: "Nice yacht, where\u2019d you get it, the yacht store?"
   sanityChange: 1
   pausesTime: 1
   isBossPost: 0

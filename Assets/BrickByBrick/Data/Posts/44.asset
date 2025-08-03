@@ -13,10 +13,16 @@ MonoBehaviour:
   m_Name: 44
   m_EditorClassIdentifier: 
   userProfile: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
-  postTags: 07000000
-  description: 44 Humble Brag
+  postTags: 070000000a00000004000000
+  description: "I have this gold on and all the haters don\u2019t. #nottobrag"
   postImage: {fileID: 6449624154353268576, guid: 19f768577d215494f975c1141880b4c4, type: 3}
-  commenters: []
+  commenters:
+  - commentingUser: {fileID: 11400000, guid: 6b67c2b0399f2ad4ab51a811ced38ea6, type: 2}
+    comment: Who do you think your fooling with this
+  - commentingUser: {fileID: 11400000, guid: 2370ed06dc6662f42a780733015493b8, type: 2}
+    comment: Yass queen, you tell em
+  - commentingUser: {fileID: 11400000, guid: ca80c3934f7f2af4498119764a33be6f, type: 2}
+    comment: "Ain\u2019t no bling gonna stop me"
   sanityChange: 1
   pausesTime: 0
   isBossPost: 0

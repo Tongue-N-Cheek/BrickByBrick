@@ -14,9 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   userProfile: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
   postTags: 07000000
-  description: 38 Humble Brag
+  description: I worked hard for this view
   postImage: {fileID: -4267721028580820997, guid: 0467b97c5464f984091051e12739043d, type: 3}
-  commenters: []
+  commenters:
+  - commentingUser: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
+    comment: well worth the wait
+  - commentingUser: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
+    comment: yo this image is totally AI, the earth isn't that round
   sanityChange: 1
   pausesTime: 0
   isBossPost: 0
