@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
     private PostConstructor postConstructor;
     private Image postTimerImage;
     private MessagesPanel messagesPanel;
+    private BrainrotMeter brainrotMeter;
 
     private BossStage bossStage = BossStage.Tutorial;
     private bool isPaused = false;
@@ -112,6 +113,7 @@ public class GameManager : MonoBehaviour
     public void SetPostConstructor(PostConstructor postConstructor) => this.postConstructor = postConstructor;
     public void SetPostTimerImage(Image postTimerImage) => this.postTimerImage = postTimerImage;
     public void SetMessagesPanel(MessagesPanel messagesPanel) => this.messagesPanel = messagesPanel;
+    public void SetBrainrotMeter(BrainrotMeter brainrotMeter) => this.brainrotMeter = brainrotMeter;
 
     public void Scroll()
     {
@@ -143,6 +145,7 @@ public class GameManager : MonoBehaviour
     {
         Post post = postConstructor.GetCurrentPostObject().Post;
         Algorithm.Interact(post.postTags.ToList(), weightChange);
+        if (weightChange > 0) brainrotMeter.ChangeSanity(post.sanityChange);
     }
 
     public void Repost()
@@ -228,6 +231,12 @@ public class GameManager : MonoBehaviour
     public bool RepostedMinimum(Tags tag, int minimumReposts) =>
        (repostedTags.ContainsKey(tag) && repostedTags[tag] >= minimumReposts) || minimumReposts == 0;
 
+    public void SetBrainrotted()
+    {
+        gameOverReason = GameOverReason.Brainrot;
+        SceneManager.OverlayScene("S_GameOver");
+    }
+
     public string GetGameOverText() => gameOverReason switch
     {
         GameOverReason.ExGirlfriend => "At first, you thought that this might work out. Despite the abrupt ending to your previous relationship, you genuinely thought that you would be able to make it work the second time. Alas, those were the notions of a naive version of yourself, one that still had hope of a brighter future. Not that you are sad or anything, on the contrary, you feel nothing at all. You put in all that effort, and for what? Perhaps one day you might find love, but right now, the only thing you can feel is hollow.",
@@ -256,6 +265,7 @@ public class GameManager : MonoBehaviour
     {
         yield return new WaitForSeconds(0f);
         Algorithm.Init(AllPosts.ToList());
+        brainrotMeter.ResetSanity();
         GameState = GameState.Playing;
         bossStage = BossStage.Tutorial;
         gameOverReason = GameOverReason.None;
