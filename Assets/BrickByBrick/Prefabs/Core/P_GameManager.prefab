@@ -148,6 +148,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 14730381b9675b84081a9a52bc7ab7dd, type: 2}
   tutorialPosts:
   - {fileID: 11400000, guid: 04b25d3313d6d2c42ab8fb843391a24b, type: 2}
+  - {fileID: 11400000, guid: 08192e5de8817b643900f9a3ed636e55, type: 2}
+  - {fileID: 11400000, guid: a12e638a0b920b2489603d4f0af8a708, type: 2}
+  - {fileID: 11400000, guid: bc96a77becc29d643b65ba96f0b5419e, type: 2}
+  - {fileID: 11400000, guid: 118a2a5f49932d24dbf36942492ab0a7, type: 2}
+  - {fileID: 11400000, guid: 2b07d6fb732ab684a91d466c103e397f, type: 2}
   bossPosts:
   - {fileID: 11400000, guid: 3aaa034ae75a4da499fd89246e4ac720, type: 2}
   - {fileID: 11400000, guid: 64550cbc98551944ba6bfb2d02c19c36, type: 2}

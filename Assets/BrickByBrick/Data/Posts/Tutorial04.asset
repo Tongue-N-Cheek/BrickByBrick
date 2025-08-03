@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 17eef46343b5f9641bc27de74b3a8443, type: 3}
-  m_Name: Tutorial01
+  m_Name: Tutorial04
   m_EditorClassIdentifier: 
   userProfile: {fileID: 11400000, guid: 52a5cda208bc5274f80cd95d8b6e93a9, type: 2}
   postTags: 
-  description: Welcome, new user. On Looker, all posts are just a scroll away. Click
-    the dislike or repost buttons to scroll.
+  description: To DM someone, you must have a similar algorithm to theirs. You can
+    see their profile in the top right.
   postImage: {fileID: -1666977519757924501, guid: 133d00bbf9c68564396d85a9404fea1b, type: 3}
   commenters: []
   sanityChange: 0
