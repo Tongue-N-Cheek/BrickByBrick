@@ -5,9 +5,12 @@ using UnityEngine;
 public class PostConstructor : MonoBehaviour
 {
     public static UserNames UserNameDatabase;
+    public static ProfilePics ProfilePicDatabase;
 
     [SerializeField, Header("Data")]
     private UserNames userNameDatabase;
+    [SerializeField]
+    private ProfilePics profilePicDatabase;
     [SerializeField, Header("Posts")]
     private PostObject postPrefab;
     [SerializeField]
@@ -31,6 +34,7 @@ public class PostConstructor : MonoBehaviour
     public void Awake()
     {
         UserNameDatabase = userNameDatabase;
+        ProfilePicDatabase = profilePicDatabase;
     }
 
     public void Start()
