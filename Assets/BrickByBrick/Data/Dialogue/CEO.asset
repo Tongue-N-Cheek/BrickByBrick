@@ -102,9 +102,9 @@ MonoBehaviour:
       score: 10
       relatedTag: 0
       minimumTagReposts: 0
-    - choice: I do not.
+    - choice: I do.
       responseLines: []
-      score: -10
+      score: 10
       relatedTag: 0
       minimumTagReposts: 0
   failure:

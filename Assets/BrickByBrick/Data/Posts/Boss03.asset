@@ -15,7 +15,7 @@ MonoBehaviour:
   userProfile: {fileID: 11400000, guid: 0caefd796bea033419400da1ad515707, type: 2}
   postTags: 
   description: Looker might be making drastic policy changes in the future
-  postImage: {fileID: -1666977519757924501, guid: 133d00bbf9c68564396d85a9404fea1b, type: 3}
+  postImage: {fileID: -6801121013047735539, guid: 28681191083603642ad07e96a7923172, type: 3}
   commenters: []
   sanityChange: 0
   pausesTime: 1
