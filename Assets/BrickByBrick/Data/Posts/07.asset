@@ -17,4 +17,6 @@ MonoBehaviour:
   description: 07 Cat
   postImage: {fileID: 1583092943054279720, guid: b9bd53fdd1cfe49498b044c82f671fd4, type: 3}
   commenters: []
+  sanityChange: -1
   pausesTime: 0
+  isBossPost: 0

@@ -24,4 +24,6 @@ MonoBehaviour:
     comment: Nyan-chan!
   - commentingUser: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
     comment: lame ad for your lame game
+  sanityChange: 1
   pausesTime: 0
+  isBossPost: 0

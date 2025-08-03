@@ -17,4 +17,6 @@ MonoBehaviour:
   description: 83 Advertisement
   postImage: {fileID: -7302116284782662208, guid: cedb076d414bd0a4d94a9b44f5e9b03e, type: 3}
   commenters: []
+  sanityChange: -1
   pausesTime: 0
+  isBossPost: 0

@@ -18,4 +18,6 @@ MonoBehaviour:
     moon
   postImage: {fileID: 4818795264257907174, guid: a441fc6fb7ea4554fa7435fab1bd768e, type: 3}
   commenters: []
+  sanityChange: -1
   pausesTime: 0
+  isBossPost: 0

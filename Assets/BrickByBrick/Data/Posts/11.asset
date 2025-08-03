@@ -17,4 +17,6 @@ MonoBehaviour:
   description: 11 Jewelry
   postImage: {fileID: -8632872937129733033, guid: 96d3ef8f77c60334e8b801a2b95804c7, type: 3}
   commenters: []
+  sanityChange: 1
   pausesTime: 0
+  isBossPost: 0

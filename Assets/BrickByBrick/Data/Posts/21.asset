@@ -17,4 +17,6 @@ MonoBehaviour:
   description: 21 Astrology
   postImage: {fileID: -6400021916256205596, guid: b0601d5a615aaf145ba59114c5cd1481, type: 3}
   commenters: []
+  sanityChange: 1
   pausesTime: 0
+  isBossPost: 0

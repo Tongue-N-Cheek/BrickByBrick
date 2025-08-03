@@ -5,12 +5,12 @@ public class ImagePostTimer : MonoBehaviour
 {
 	public Image postTimerImage;
 
-	public void Awake()
+	public void Start()
 	{
 		GameManager.Instance.SetPostTimerImage(postTimerImage);
 	}
 
-	public void Oestroy()
+	public void OnDestroy()
 	{
 		GameManager.Instance.SetPostTimerImage(null);		
 	}

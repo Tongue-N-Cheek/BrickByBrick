@@ -255,7 +255,7 @@ public enum GameState
 
 public enum BossStage
 {
-    Tutorial,
+    Tutorial, // Ignore, not really used for anything, but don't remove because it will break stuff
     ExGirlfriend,
     CryptoBro,
     CEO

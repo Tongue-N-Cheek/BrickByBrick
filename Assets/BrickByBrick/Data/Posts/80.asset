@@ -17,4 +17,6 @@ MonoBehaviour:
   description: "Buy today to bring Zachoin to the moon.\r"
   postImage: {fileID: 5543640534919029023, guid: 30bbbbb1637b64540ad75ffe3e4017f0, type: 3}
   commenters: []
+  sanityChange: -1
   pausesTime: 0
+  isBossPost: 0

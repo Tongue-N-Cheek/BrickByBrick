@@ -17,4 +17,6 @@ MonoBehaviour:
   description: 47 Motivational
   postImage: {fileID: 7097017326626592747, guid: 9513f270a9df5e645820d5807cbfe356, type: 3}
   commenters: []
+  sanityChange: 1
   pausesTime: 0
+  isBossPost: 0
