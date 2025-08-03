@@ -12,4 +12,98 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ad9e190c6ccbfe43b34b913f88af152, type: 3}
   m_Name: ExGirlfriend
   m_EditorClassIdentifier: 
-  sections: []
+  sections:
+  - leadupLines:
+    - heyyyyyy
+    - its been a while
+    - ive seen you like a lot of posts on my feed
+    - i didnt know you were into that kinda of stuff
+    - ive been thinking about how we ended off our relationship
+    - i may have over reacted abit when i saw you talking to another girl
+    - but i had no way of knowing she was your sister
+    - anywayyy
+    - im willing to give it another shot
+    - but only if were compatible still
+    - do remember my star sign
+    choices:
+    - choice: Aquarius
+      responseLines:
+      - thank god
+      - i was hoping you remembered
+      score: 2
+      relatedTag: 1
+      minimumTagReposts: 2
+    - choice: Leo
+      responseLines:
+      - thats pretty close
+      - im willing to let that slide
+      score: 1
+      relatedTag: 1
+      minimumTagReposts: 1
+    - choice: Scorpio
+      responseLines:
+      - what???
+      - thats like the complete opposite of me
+      - whatever
+      score: -1
+      relatedTag: 1
+      minimumTagReposts: 0
+  - leadupLines:
+    - where do you want to go for our firstish date
+    choices:
+    - choice: A cat cafe
+      responseLines:
+      - that sounds great!!!
+      score: 2
+      relatedTag: 3
+      minimumTagReposts: 2
+    - choice: Fancy Restaurant
+      responseLines:
+      - sounds deliciousss
+      score: 1
+      relatedTag: 3
+      minimumTagReposts: 1
+    - choice: My Place?
+      responseLines:
+      - ewww no
+      score: -1
+      relatedTag: 3
+      minimumTagReposts: 0
+  - leadupLines:
+    - oh my goshhhh
+    - i cant believe i almost forgot
+    - what are you going to get me for our getting together present?
+    choices:
+    - choice: A necklace
+      responseLines:
+      - OMGGGG thats so perfectttt
+      score: 2
+      relatedTag: 4
+      minimumTagReposts: 2
+    - choice: A new outfit
+      responseLines:
+      - that so thoughtful
+      score: 1
+      relatedTag: 4
+      minimumTagReposts: 1
+    - choice: Getting together present?
+      responseLines:
+      - oh
+      - dont worry about it
+      - just thought that you cared more about me
+      score: -1
+      relatedTag: 4
+      minimumTagReposts: 0
+  success:
+  - leadupLines:
+    - im soooo excited!!!
+    - cant wait to give this another tryyy
+    - i guess ill see you tomorrow nighttt
+    choices: []
+  failure:
+  - im sorry
+  - but now that i think about it
+  - i just dont think this will work out
+  - i thought you knew me better
+  - but i guess you didnt actually care about me
+  - maybe its for the best if we just go our separate ways
