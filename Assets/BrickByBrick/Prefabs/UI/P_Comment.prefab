@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 982397832485532058}
   - component: {fileID: 3480737110751058589}
   - component: {fileID: 8872096199342002557}
+  - component: {fileID: 8750592518571842078}
   m_Layer: 5
   m_Name: P_Comment
   m_TagString: Untagged
@@ -150,6 +151,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &8750592518571842078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2285318745774272702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c71c3e12baf10c146b51cd8ca2f4dfc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 8872096199342002557}
+  clickSound: {fileID: 8300000, guid: b023dfba57c603f479f682fce4f3b1bd, type: 3}
 --- !u!1 &3829288338522827588
 GameObject:
   m_ObjectHideFlags: 0

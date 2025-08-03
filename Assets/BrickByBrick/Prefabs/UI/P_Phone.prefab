@@ -88,6 +88,7 @@ GameObject:
   - component: {fileID: 4146160094777364372}
   - component: {fileID: 6847913752874318294}
   - component: {fileID: 3279633049896912042}
+  - component: {fileID: 5878968433025558356}
   m_Layer: 5
   m_Name: ButtonComments
   m_TagString: Untagged
@@ -209,6 +210,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 6847913752874318294}
+--- !u!114 &5878968433025558356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3852126217425431418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c71c3e12baf10c146b51cd8ca2f4dfc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 6847913752874318294}
+  clickSound: {fileID: 8300000, guid: b023dfba57c603f479f682fce4f3b1bd, type: 3}
 --- !u!1 &6493330352330337439
 GameObject:
   m_ObjectHideFlags: 0
@@ -222,6 +237,7 @@ GameObject:
   - component: {fileID: 6350205403627329024}
   - component: {fileID: 960808907925381748}
   - component: {fileID: 3361607045329623310}
+  - component: {fileID: 802566481357205399}
   m_Layer: 5
   m_Name: ButtonScrollPost
   m_TagString: Untagged
@@ -343,6 +359,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 960808907925381748}
+--- !u!114 &802566481357205399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6493330352330337439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c71c3e12baf10c146b51cd8ca2f4dfc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 960808907925381748}
+  clickSound: {fileID: 8300000, guid: b023dfba57c603f479f682fce4f3b1bd, type: 3}
 --- !u!1 &6607987515499695520
 GameObject:
   m_ObjectHideFlags: 0
@@ -749,6 +779,7 @@ GameObject:
   - component: {fileID: 3332012573800457096}
   - component: {fileID: 3588184341804220939}
   - component: {fileID: 1899592254137142135}
+  - component: {fileID: 2517630121458350308}
   m_Layer: 5
   m_Name: ButtonDislike
   m_TagString: Untagged
@@ -870,6 +901,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 3588184341804220939}
+--- !u!114 &2517630121458350308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8864395068333050409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c71c3e12baf10c146b51cd8ca2f4dfc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 3588184341804220939}
+  clickSound: {fileID: 8300000, guid: b023dfba57c603f479f682fce4f3b1bd, type: 3}
 --- !u!1 &9184650643446472397
 GameObject:
   m_ObjectHideFlags: 0
@@ -883,6 +928,7 @@ GameObject:
   - component: {fileID: 3955580065128074254}
   - component: {fileID: 8030405770815177685}
   - component: {fileID: 4158691523666397377}
+  - component: {fileID: 6343927267518029888}
   m_Layer: 5
   m_Name: MessagesButton
   m_TagString: Untagged
@@ -1006,3 +1052,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 8030405770815177685}
   notificationImage: {fileID: 4798881344310422048}
+--- !u!114 &6343927267518029888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9184650643446472397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c71c3e12baf10c146b51cd8ca2f4dfc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 8030405770815177685}
+  clickSound: {fileID: 8300000, guid: b023dfba57c603f479f682fce4f3b1bd, type: 3}

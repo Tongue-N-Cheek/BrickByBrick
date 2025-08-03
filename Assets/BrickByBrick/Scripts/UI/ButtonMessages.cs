@@ -5,6 +5,7 @@ public class ButtonMessages : MonoBehaviour
 {
 	public Button button;
 	public Image notificationImage;
+	public AudioClip notificationSound;
 
 	public void Start()
 	{
@@ -14,6 +15,7 @@ public class ButtonMessages : MonoBehaviour
 	public void ShowNotification()
 	{
 		notificationImage.enabled = true;
+		AudioManager.PlayOnce(notificationSound);
 	}
 
 	public void HideNotification()

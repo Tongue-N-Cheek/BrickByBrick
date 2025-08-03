@@ -20,6 +20,8 @@ public class MessagesPanel : MonoBehaviour
 	private bool isChoiceMade = false;
 	private int choiceIndex = -1;
 
+	public AudioClip newMessageSound;
+
 	public void Start()
 	{
 		GameManager.Instance.SetMessagesPanel(this);
@@ -40,7 +42,8 @@ public class MessagesPanel : MonoBehaviour
 	{
 		for (int i = 0; i < messages.Count; i++)
 		{
-			Comment c = messages[i];
+            AudioManager.PlayOnce(newMessageSound);
+            Comment c = messages[i];
 			c.SetPosition(
 				maskRectTransform.position
 				+ (Vector3)commentOrigin

@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
     public GameState GameState { get; private set; }
     [SerializeField, Header("Audio")]
     private AudioMixer mixer;
+    public AudioSource SFXSource;
 
     private PostConstructor postConstructor;
     private Image postTimerImage;
@@ -263,7 +264,7 @@ public class GameManager : MonoBehaviour
     {
         Instance = this;
         DontDestroyOnLoad(gameObject);
-        AudioManager.Init(mixer);
+        AudioManager.Init(mixer, SFXSource);
 
 #if UNITY_EDITOR
         if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "S_Game")

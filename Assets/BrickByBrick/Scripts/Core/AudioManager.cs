@@ -4,8 +4,13 @@ using UnityEngine.Audio;
 public static class AudioManager
 {
 	private static AudioMixer mixer;
+	private static AudioSource SFXsource;
 
-	public static void Init(AudioMixer mixer) => AudioManager.mixer = mixer;
+	public static void Init(AudioMixer mixer, AudioSource source)
+	{
+		AudioManager.mixer = mixer;
+		SFXsource = source;
+	}
 
 	public static void SetVolume(AudioGroupName group, float volume)
 	{
@@ -21,6 +26,11 @@ public static class AudioManager
 		AudioGroupName.SFX => "VolumeSFX",
 		_ => throw new System.Exception("Unknown audio group")
 	};
+
+	public static void PlayOnce(AudioClip clip)
+	{
+		SFXsource.PlayOneShot(clip);
+	}
 
 	private static float GetAttenuation(float volume)
 	{
