@@ -4,8 +4,6 @@ using System.Collections;
 using UnityEngine.UI;
 using System.Collections.Generic;
 using System.Linq;
-using UnityEngine.InputSystem.Interactions;
-
 
 #if UNITY_EDITOR
 using UnityEditor;
@@ -175,7 +173,7 @@ public class GameManager : MonoBehaviour
     public void ChangeScore(int scoreChange)
     {
         bossScore += scoreChange;
-        Debug.Log("Score: " + bossScore);
+        Debug.LogWarning("Score: " + bossScore);
     }
 
     public bool WonAgainstBoss() => bossStage switch

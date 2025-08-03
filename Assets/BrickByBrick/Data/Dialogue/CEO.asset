@@ -46,18 +46,18 @@ MonoBehaviour:
     - For simpler creatures, it is simply survival or entertainment.
     - Pray tell user, what is your driving force?
     choices:
-    - choice: My car?
-      responseLines:
-      - Your attempt at humor failed before you even pressed send. I am disappointed.
-      score: -2
-      relatedTag: 9
-      minimumTagReposts: 0
     - choice: Wealth.
       responseLines:
       - An admirable goal, but still short sighted.
       score: 0
       relatedTag: 10
       minimumTagReposts: 2
+    - choice: My car?
+      responseLines:
+      - Your attempt at humor failed before you even pressed send. I am disappointed.
+      score: -2
+      relatedTag: 9
+      minimumTagReposts: 0
     - choice: Power.
       responseLines:
       - Splendid.
@@ -68,18 +68,18 @@ MonoBehaviour:
     - I have one last question for you to ponder user.
     - What is the most valuable currency in existence?
     choices:
-    - choice: Pennies.
-      responseLines:
-      - It appears my interest was misplaced.
-      score: -2
-      relatedTag: 8
-      minimumTagReposts: 0
     - choice: People.
       responseLines:
       - Close, but not quite.
       score: 1
       relatedTag: 8
       minimumTagReposts: 2
+    - choice: Pennies.
+      responseLines:
+      - It appears my interest was misplaced.
+      score: -2
+      relatedTag: 8
+      minimumTagReposts: 0
     - choice: Information.
       responseLines:
       - Correct.
@@ -92,8 +92,8 @@ MonoBehaviour:
     - I believe you are a worthy of becoming my successor.
     - The truth is, I will soon no longer be fit to be the CEO of Looker.
     - I have been seeking someone wise enough to replace me.
-    - I believe with your knowledge, you can ensure the masses remain transfixed
-      upon their devices, and allow my company to thrive.
+    - I believe with your knowledge, you can ensure the masses remain transfixed.
+    - My company will thrive.
     - Do you accept my offer?
     choices:
     - choice: I do.

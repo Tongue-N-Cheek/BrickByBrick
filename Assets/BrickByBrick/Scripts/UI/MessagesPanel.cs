@@ -38,7 +38,6 @@ public class MessagesPanel : MonoBehaviour
 
 	public void ShowMessage(string message, bool isSelfMessage = false, int optionIndex = -1)
 	{
-		Debug.Log(message);
 		for (int i = 0; i < messages.Count; i++)
 		{
 			Comment c = messages[i];
@@ -189,7 +188,6 @@ public class MessagesPanel : MonoBehaviour
 
 	public void ChoiceMade(int index)
 	{
-		Debug.Log("Choice made: " + index);
 		choiceIndex = index;
 
 		foreach (Comment comment in activeChoices)
