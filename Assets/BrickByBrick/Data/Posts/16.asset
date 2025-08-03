@@ -17,7 +17,13 @@ MonoBehaviour:
   description: Did you know 99% of kings throughout history were born under a full
     moon
   postImage: {fileID: 4818795264257907174, guid: a441fc6fb7ea4554fa7435fab1bd768e, type: 3}
-  commenters: []
+  commenters:
+  - commentingUser: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
+    comment: '#sotrue #not'
+  - commentingUser: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
+    comment: is that AI?
+  - commentingUser: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
+    comment: love the crown!
   sanityChange: -1
   pausesTime: 0
   isBossPost: 0

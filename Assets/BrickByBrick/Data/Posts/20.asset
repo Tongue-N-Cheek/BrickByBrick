@@ -14,9 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   userProfile: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
   postTags: 01000000
-  description: 20 Astrology
+  description: Me! Schizo post
   postImage: {fileID: -8633296663553050192, guid: 8ca22af17141a3246b670c66ed675582, type: 3}
-  commenters: []
+  commenters:
+  - commentingUser: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
+    comment: A what??
+  - commentingUser: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
+    comment: love the colors
   sanityChange: 1
   pausesTime: 0
   isBossPost: 0

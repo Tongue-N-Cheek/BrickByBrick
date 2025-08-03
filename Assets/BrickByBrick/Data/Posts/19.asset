@@ -14,9 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   userProfile: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
   postTags: 01000000
-  description: 19 Astrology
+  description: '#aquarius4life'
   postImage: {fileID: 6863138802234961600, guid: 6abd89aa63df1cf42ae87984a5b363dc, type: 3}
-  commenters: []
+  commenters:
+  - commentingUser: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
+    comment: I cant
+  - commentingUser: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
+    comment: Air signs all the wayyyyy
+  - commentingUser: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
+    comment: my ex was an aquarius
   sanityChange: 1
   pausesTime: 0
   isBossPost: 0

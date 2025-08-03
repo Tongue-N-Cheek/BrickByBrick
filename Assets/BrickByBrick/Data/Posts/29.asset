@@ -14,9 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   userProfile: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
   postTags: 05000000
-  description: 29 Gym
+  description: '#tbt'
   postImage: {fileID: -8496825621474772271, guid: 4196d1c02ac28f5498c05bba6f0c3545, type: 3}
-  commenters: []
+  commenters:
+  - commentingUser: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
+    comment: Wish I had gains like u
   sanityChange: 1
   pausesTime: 0
   isBossPost: 0

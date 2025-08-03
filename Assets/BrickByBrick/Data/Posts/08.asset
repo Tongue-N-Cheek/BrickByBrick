@@ -13,10 +13,16 @@ MonoBehaviour:
   m_Name: 08
   m_EditorClassIdentifier: 
   userProfile: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
-  postTags: 03000000
-  description: 08 Cat
+  postTags: 030000000100000008000000
+  description: This cat is all-knowing. Leo is the prophet of the future.
   postImage: {fileID: 6985755295904369404, guid: 68e8b24b744a4c7488c9149434526737, type: 3}
-  commenters: []
+  commenters:
+  - commentingUser: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
+    comment: I don't disagree!
+  - commentingUser: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
+    comment: all hail the all-knowing cat
+  - commentingUser: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
+    comment: are you sure this cat knows everything?
   sanityChange: 1
   pausesTime: 0
   isBossPost: 0

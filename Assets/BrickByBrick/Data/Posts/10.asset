@@ -12,11 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17eef46343b5f9641bc27de74b3a8443, type: 3}
   m_Name: 10
   m_EditorClassIdentifier: 
-  userProfile: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
-  postTags: 04000000
-  description: 10 Jewelry
+  userProfile: {fileID: 11400000, guid: 3b1e33a76457a0b4cbfa3fadb01d968a, type: 2}
+  postTags: 040000000900000007000000
+  description: When he pays for  your nails <3 #king
   postImage: {fileID: -5635745363119900113, guid: 7fd2ee02fa767c5428ff477db1c55149, type: 3}
-  commenters: []
+  commenters:
+  - commentingUser: {fileID: 11400000, guid: 0caefd796bea033419400da1ad515707, type: 2}
+    comment: gurl u deserve better
+  - commentingUser: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
+    comment: IS THAT A RING??!!1?>
+  - commentingUser: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
+    comment: just a girl <3
   sanityChange: 1
   pausesTime: 0
   isBossPost: 0
