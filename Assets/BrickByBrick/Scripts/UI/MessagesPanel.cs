@@ -103,17 +103,26 @@ public class MessagesPanel : MonoBehaviour
 				yield return new WaitForSeconds(characterCount * 0.08f);
 			}
 
-			for (int i = 0; i < section.choices.Length; i++)
+			if (section.choices.Length <= 0) continue;
+
+			DialogueChoice[] shuffledChoices = section.choices;
+			for (int i = 0; i < shuffledChoices.Length; i++)
 			{
-				DialogueChoice choice = section.choices[i];
+				int j = Random.Range(0, i + 1);
+				(shuffledChoices[i], shuffledChoices[j]) = (shuffledChoices[j], shuffledChoices[i]);
+			}
+
+			for (int i = 0; i < shuffledChoices.Length; i++)
+			{
+				DialogueChoice choice = shuffledChoices[i];
 				if (!GameManager.Instance.RepostedMinimum(choice.relatedTag, choice.minimumTagReposts)) continue;
 				ShowMessage(choice.choice, true, i);
 				yield return new WaitForSeconds(0.3f);
 			}
 
-			if (section.choices.Length > 0) yield return new WaitUntil(() => isChoiceMade);
+			yield return new WaitUntil(() => isChoiceMade);
 
-			foreach (string line in section.choices[choiceIndex].responseLines)
+			foreach (string line in shuffledChoices[choiceIndex].responseLines)
 			{
 				ShowMessage(line);
 				int characterCount = line.Length;
@@ -137,14 +146,14 @@ public class MessagesPanel : MonoBehaviour
 					yield return new WaitForSeconds(characterCount * 0.08f);
 				}
 
+				if (section.choices.Length <= 0) continue;
+
 				for (int i = 0; i < section.choices.Length; i++)
 				{
 					DialogueChoice choice = section.choices[i];
 					ShowMessage(choice.choice, true, i);
 					yield return new WaitForSeconds(0.3f);
 				}
-
-				if (section.choices.Length <= 0) continue;
 
 				yield return new WaitUntil(() => isChoiceMade);
 
