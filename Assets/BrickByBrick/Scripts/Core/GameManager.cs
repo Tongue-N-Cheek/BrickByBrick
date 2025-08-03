@@ -201,7 +201,7 @@ public class GameManager : MonoBehaviour
         {
             postConstructor.BuildPost(post);
         }
-        postConstructor.BuildPost(bossPosts[0]);
+        postConstructor.BuildPost(bossPosts[(int)bossStage - 1]); // Bad hardcoding
     }
 
     public bool RepostedMinimum(Tags tag, int minimumReposts) => repostedTags[tag] >= minimumReposts;
