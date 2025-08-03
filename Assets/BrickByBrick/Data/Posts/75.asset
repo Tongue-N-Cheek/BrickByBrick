@@ -12,11 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17eef46343b5f9641bc27de74b3a8443, type: 3}
   m_Name: 75
   m_EditorClassIdentifier: 
-  userProfile: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
+  userProfile: {fileID: 11400000, guid: 2ee681668639cd349b68f851375920e5, type: 2}
   postTags: 0a000000
   description: 75 AI
   postImage: {fileID: -1004247989045689867, guid: d8a88420e0ded48448f3375e29d38e32, type: 3}
-  commenters: []
+  commenters:
+  - commentingUser: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
+    comment: This is ominous as hell.
+  - commentingUser: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
+    comment: Yes, let us all embrace the machines.
+  - commentingUser: {fileID: 11400000, guid: 6b67c2b0399f2ad4ab51a811ced38ea6, type: 2}
+    comment: Get off the site Clanker
   sanityChange: -1
   pausesTime: 0
   isBossPost: 0

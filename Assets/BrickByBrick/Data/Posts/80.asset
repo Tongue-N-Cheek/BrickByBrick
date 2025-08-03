@@ -12,11 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17eef46343b5f9641bc27de74b3a8443, type: 3}
   m_Name: 80
   m_EditorClassIdentifier: 
-  userProfile: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
+  userProfile: {fileID: 11400000, guid: 5f062db241ed358408e3a04fe8fe5278, type: 2}
   postTags: 0a0000000600000005000000
   description: "Buy today to bring Zachoin to the moon.\r"
   postImage: {fileID: 5543640534919029023, guid: 30bbbbb1637b64540ad75ffe3e4017f0, type: 3}
-  commenters: []
+  commenters:
+  - commentingUser: {fileID: 11400000, guid: 0cbf1063b23d7fe4dbbe712427e00e48, type: 2}
+    comment: To the moooon!!!
+  - commentingUser: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
+    comment: He's so strong
+  - commentingUser: {fileID: 11400000, guid: 6b67c2b0399f2ad4ab51a811ced38ea6, type: 2}
+    comment: Please stop reposting Zach's AI trash
   sanityChange: -1
   pausesTime: 0
   isBossPost: 0

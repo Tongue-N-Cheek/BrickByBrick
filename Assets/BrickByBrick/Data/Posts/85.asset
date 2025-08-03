@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 85
   m_EditorClassIdentifier: 
   userProfile: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
-  postTags: 0b000000
+  postTags: 0b00000005000000
   description: 85 Advertisement
   postImage: {fileID: 6437064168166761608, guid: 2ec5a9bd6558ad344bbe367279f85864, type: 3}
   commenters: []

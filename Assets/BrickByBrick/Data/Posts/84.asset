@@ -16,7 +16,17 @@ MonoBehaviour:
   postTags: 0b000000
   description: 84 Advertisement
   postImage: {fileID: 1201609641859394601, guid: 02033f2c69176b9498198ebe98a12587, type: 3}
-  commenters: []
+  commenters:
+  - commentingUser: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
+    comment: I love my country
+  - commentingUser: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
+    comment: I hate my country
+  - commentingUser: {fileID: 11400000, guid: 6b67c2b0399f2ad4ab51a811ced38ea6, type: 2}
+    comment: Despite what conflicting feelings you may have about the current state
+      of the nation it is important to remember that it is the people who make it
+      up and not the government. They want you to fight their wars for them when
+      your true responsibility is to your communities. Organize mutual aid and build
+      close connections. Become self sustaining. I believe in you.
   sanityChange: -1
   pausesTime: 0
   isBossPost: 0

@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17eef46343b5f9641bc27de74b3a8443, type: 3}
   m_Name: 96
   m_EditorClassIdentifier: 
-  userProfile: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
-  postTags: 0c000000
+  userProfile: {fileID: 11400000, guid: 6b67c2b0399f2ad4ab51a811ced38ea6, type: 2}
+  postTags: 0c0000000a000000
   description: 96 Brainrot
   postImage: {fileID: -4713036365508495988, guid: 08b68800963c6ca4882e49194d513cd9, type: 3}
   commenters: []
