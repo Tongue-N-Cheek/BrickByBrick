@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bca1b714a5932b1409abad744226a3ab, type: 3}
   m_Name: JimAtDaGym
   m_EditorClassIdentifier: 
-  profilePic: {fileID: 3102969638208902399, guid: 44f5aca26b119d0459b449ea5b24d9b1, type: 3}
+  profilePic: {fileID: 21300000, guid: 44f5aca26b119d0459b449ea5b24d9b1, type: 3}
   userName: Jim@DaGym
   followerCount: 0
   followingCount: 0

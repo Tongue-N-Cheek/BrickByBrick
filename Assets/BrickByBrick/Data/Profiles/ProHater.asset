@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bca1b714a5932b1409abad744226a3ab, type: 3}
   m_Name: ProHater
   m_EditorClassIdentifier: 
-  profilePic: {fileID: -5910499664909172638, guid: 100c1a3dbbbb3534f8cc6e63e7b8771d, type: 3}
+  profilePic: {fileID: 21300000, guid: 100c1a3dbbbb3534f8cc6e63e7b8771d, type: 3}
   userName: ProHater
   followerCount: 0
   followingCount: 0

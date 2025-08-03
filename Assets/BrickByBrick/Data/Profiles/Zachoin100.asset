@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bca1b714a5932b1409abad744226a3ab, type: 3}
   m_Name: Zachoin100
   m_EditorClassIdentifier: 
-  profilePic: {fileID: 0}
+  profilePic: {fileID: 21300000, guid: e126fa6c0d1c88344ab5145948d769db, type: 3}
   userName: Zachoin100
   followerCount: 0
   followingCount: 0
