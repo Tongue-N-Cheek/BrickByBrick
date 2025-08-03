@@ -40,10 +40,11 @@ public class MessagesPanel : MonoBehaviour
 
 	public void ShowMessage(string message, bool isSelfMessage = false, int optionIndex = -1)
 	{
+		AudioManager.PlayOnce(newMessageSound);
+
 		for (int i = 0; i < messages.Count; i++)
 		{
-            AudioManager.PlayOnce(newMessageSound);
-            Comment c = messages[i];
+			Comment c = messages[i];
 			c.SetPosition(
 				maskRectTransform.position
 				+ (Vector3)commentOrigin
