@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour
     private MessagesPanel messagesPanel;
     private BrainrotMeter brainrotMeter;
     private ProfilePanel profilePanel;
+    private CommentsPanel commentsPanel;
 
     private BossStage bossStage = BossStage.Tutorial;
     private bool isPaused = false;
@@ -116,10 +117,12 @@ public class GameManager : MonoBehaviour
     public void SetMessagesPanel(MessagesPanel messagesPanel) => this.messagesPanel = messagesPanel;
     public void SetBrainrotMeter(BrainrotMeter brainrotMeter) => this.brainrotMeter = brainrotMeter;
     public void SetProfilePanel(ProfilePanel profilePanel) => this.profilePanel = profilePanel;
+    public void SetCommentsPanel(CommentsPanel commentsPanel) => this.commentsPanel = commentsPanel;
 
     public void Scroll()
     {
         postConstructor.Scroll();
+        commentsPanel.CloseComments();
 
         Post post = postConstructor.GetCurrentPostObject().Post;
         isBossPost = post.isBossPost;
@@ -173,7 +176,13 @@ public class GameManager : MonoBehaviour
 
     public void OpenComments()
     {
-        // TODO: Unhide comments UI
+        if (commentsPanel.IsOpen) return;
+        string[] comments = postConstructor
+            .GetCurrentPostObject().Post.commenters
+            .Select(commenter => commenter.comment).ToArray();
+        if (comments.Length <= 0) return;
+        InteractWithCurrentPost(1);
+        commentsPanel.OpenComments(comments);
     }
 
     public void ChangeScore(int scoreChange)

@@ -9,8 +9,7 @@ public class ButtonComments : MonoBehaviour
 	{
 		button.onClick.AddListener(() =>
 		{
-			// GameManager.Instance.OpenComments();
-			GameManager.Instance.InteractWithCurrentPost(1);
+			GameManager.Instance.OpenComments();
 		});
 	}
 }
