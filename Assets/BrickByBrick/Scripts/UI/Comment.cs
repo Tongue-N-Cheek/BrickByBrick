@@ -1,11 +1,19 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
+public delegate void OnCommentClicked(int optionIndex);
+
 public class Comment : MonoBehaviour
 {
+	public int OptionIndex { get; set; } = -1;
+	public event OnCommentClicked Clicked;
+
 	[SerializeField, Header("Components")]
 	private Image background;
+	[SerializeField]
+	private Button button;
 	[SerializeField]
 	private Image arrow;
 	[SerializeField]
@@ -14,6 +22,8 @@ public class Comment : MonoBehaviour
 	private CommentColor color;
 	[SerializeField]
 	private CommentArrow arrowSide;
+	[SerializeField, Tooltip("How fast the comment moves")]
+	private float lambda;
 	[SerializeField, Header("Variants")]
 	private Sprite commentBackgroundBlue;
 	[SerializeField]
@@ -30,6 +40,28 @@ public class Comment : MonoBehaviour
 	private Vector2 arrowOffsetLeft = new(15.3f - 192f, 0); // Hardcoded offset
 	[SerializeField]
 	private Vector2 arrowOffsetRight = new(-120.3f + 192f, 0); // Hardcoded offset
+
+	private Vector2 desiredPosition;
+	private bool isClickableChoice = false;
+
+	public void Start()
+	{
+		button.onClick.AddListener(() =>
+		{
+			if (!isClickableChoice) return;
+			Clicked?.Invoke(OptionIndex);
+			SetArrow(CommentArrow.Right);
+		});
+	}
+
+	public void Update()
+	{
+		transform.position = Vector2.Lerp(
+			gameObject.transform.position,
+			desiredPosition,
+			1 - Mathf.Exp(-lambda * Time.deltaTime)
+		);
+	}
 
 #if UNITY_EDITOR
 	public void OnValidate()
@@ -69,6 +101,7 @@ public class Comment : MonoBehaviour
 		switch (arrow)
 		{
 			case CommentArrow.Left:
+				this.arrow.enabled = true;
 				this.arrow.rectTransform.anchorMin = new Vector2(0f, 0.5f);
 				this.arrow.rectTransform.anchorMax = new Vector2(0f, 0.5f);
 				this.arrow.rectTransform.pivot = new Vector2(0f, 0.5f);
@@ -76,13 +109,25 @@ public class Comment : MonoBehaviour
 				this.arrow.rectTransform.localPosition = arrowOffsetLeft;
 				break;
 			case CommentArrow.Right:
+				this.arrow.enabled = true;
 				this.arrow.rectTransform.anchorMin = new Vector2(1f, 0.5f);
 				this.arrow.rectTransform.anchorMax = new Vector2(1f, 0.5f);
 				this.arrow.rectTransform.pivot = new Vector2(1f, 0.5f);
 				this.arrow.rectTransform.localScale = new Vector3(-1f, 1f, 1f);
 				this.arrow.rectTransform.localPosition = arrowOffsetRight;
 				break;
+			case CommentArrow.None:
+				this.arrow.enabled = false;
+				break;
 		}
+	}
+
+	public void SetPosition(Vector2 position) => desiredPosition = position;
+
+	public void SetClickableChoice(bool isClickableChoice)
+	{
+		this.isClickableChoice = isClickableChoice;
+		button.interactable = isClickableChoice;
 	}
 }
 
@@ -96,5 +141,6 @@ public enum CommentColor
 public enum CommentArrow
 {
 	Left,
-	Right
+	Right,
+	None
 }

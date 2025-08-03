@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     public Post[] AllPosts { get; private set; }
     public Post[] tutorialPosts;
     public Post[] bossPosts;
+    public BossDialogue[] bossDialogues;
     [field: SerializeField]
     public GameState GameState { get; private set; }
     [SerializeField, Header("Audio")]
@@ -32,7 +33,8 @@ public class GameManager : MonoBehaviour
     private float postTimer = 10f;
     private bool isTimerRunning = false;
     private Coroutine timerCoroutine;
-    private HashSet<Tags> repostedTags = new();
+    private Dictionary<Tags, int> repostedTags = new();
+    private bool isBossPost = false;
 
     public void Awake()
     {
@@ -112,11 +114,22 @@ public class GameManager : MonoBehaviour
     public void Scroll()
     {
         postConstructor.Scroll();
+
+        Post post = postConstructor.GetCurrentPostObject().Post;
+        isBossPost = post.isBossPost;
+        if (isBossPost)
+        {
+            postConstructor.DisableButtons();
+            postConstructor.ShowNotification();
+        }
+
         postTimer = maxPostTimer;
         postTimerImage.fillAmount = 1f;
         if (timerCoroutine != null) StopCoroutine(timerCoroutine);
-        isTimerRunning = !postConstructor.GetCurrentPostObject().Post.pausesTime;
+        isTimerRunning = !post.pausesTime;
         if (isTimerRunning) timerCoroutine = StartCoroutine(PostTimer());
+
+        messagesPanel.HidePanel();
     }
 
     public void EndOfPosts()
@@ -133,12 +146,22 @@ public class GameManager : MonoBehaviour
     public void Repost()
     {
         Post post = postConstructor.GetCurrentPostObject().Post;
-        repostedTags.UnionWith(post.postTags);
+        foreach (Tags tag in post.postTags)
+        {
+            if (!repostedTags.ContainsKey(tag))
+            {
+                repostedTags[tag] = 0;
+            }
+            repostedTags[tag]++;
+        }
     }
 
-    public void ToggleMessages()
+    public void OpenMessages()
     {
-        messagesPanel.TogglePanel();
+        if (!isBossPost) return;
+        messagesPanel.ShowPanel();
+        postConstructor.HideNotification();
+        messagesPanel.StartDialogue(bossDialogues[(int)bossStage - 1]); // Bad hardcoding
     }
 
     public void OpenComments()
@@ -150,6 +173,7 @@ public class GameManager : MonoBehaviour
     {
         if (bossStage == BossStage.CEO) throw new System.Exception("End of game");
         bossStage++;
+        repostedTags.Clear();
 
         List<Post> posts = Algorithm.GetPosts(bossStage);
         foreach (Post post in posts)
@@ -169,7 +193,7 @@ public class GameManager : MonoBehaviour
 #if UNITY_EDITOR
         if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "S_Game")
         {
-            StartCoroutine(DelayedPlay());
+            Play();
         }
 #endif
     }
@@ -180,7 +204,6 @@ public class GameManager : MonoBehaviour
         GameState = GameState.Playing;
         bossStage = BossStage.Tutorial;
         postTimer = maxPostTimer;
-        // timerCoroutine = StartCoroutine(PostTimer());
 
         foreach (Post post in tutorialPosts)
         {

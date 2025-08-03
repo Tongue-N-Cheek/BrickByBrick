@@ -1,8 +1,25 @@
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class MessagesPanel : MonoBehaviour
 {
-	public CanvasGroup canvasGroup;
+	[SerializeField, Header("Components")]
+	private CanvasGroup canvasGroup;
+	[SerializeField]
+	private Transform maskRectTransform;
+	[SerializeField, Header("Comments")]
+	private Comment commentPrefab;
+	[SerializeField]
+	private Vector2 commentOrigin = new(0f, 0f);
+	[SerializeField]
+	private float commentSpacing = 192f;
+
+	private List<Comment> messages = new();
+	private List<Comment> activeChoices = new();
+	private bool isChoiceMade = false;
+	private int choiceIndex = -1;
 
 	public void Start()
 	{
@@ -15,9 +32,43 @@ public class MessagesPanel : MonoBehaviour
 		GameManager.Instance.SetMessagesPanel(null);
 	}
 
-	public void ShowMessage(string message)
+	public void StartDialogue(BossDialogue dialogue)
 	{
-		// TODO
+		StartCoroutine(ShowMultipleMessages(dialogue));
+	}
+
+	public void ShowMessage(string message, bool isSelfMessage = false, int optionIndex = -1)
+	{
+		Debug.Log(message);
+		for (int i = 0; i < messages.Count; i++)
+		{
+			Comment c = messages[i];
+			c.SetPosition(
+				maskRectTransform.position
+				+ (Vector3)commentOrigin
+				+ commentSpacing * (messages.Count - i) * Vector3.up
+			);
+		}
+
+		Comment comment = Instantiate(
+			commentPrefab,
+			maskRectTransform.position + (Vector3)commentOrigin,
+			Quaternion.identity,
+			maskRectTransform
+		);
+		comment.SetColor(isSelfMessage ? CommentColor.Blue : CommentColor.Yellow);
+		comment.SetArrow(isSelfMessage ? CommentArrow.None : CommentArrow.Left);
+		comment.SetText(message);
+		comment.SetPosition(maskRectTransform.position + (Vector3)commentOrigin);
+		comment.OptionIndex = optionIndex;
+
+		messages.Add(comment);
+		if (isSelfMessage)
+		{
+			comment.SetClickableChoice(true);
+			comment.Clicked += ChoiceMade;
+			activeChoices.Add(comment);
+		}
 	}
 
 	public void ShowPanel()
@@ -28,10 +79,62 @@ public class MessagesPanel : MonoBehaviour
 	public void HidePanel()
 	{
 		canvasGroup.alpha = 0f;
+
+		foreach (Comment c in messages)
+		{
+			Destroy(c.gameObject);
+		}
+		messages.Clear();
 	}
 
 	public void TogglePanel()
 	{
 		canvasGroup.alpha = canvasGroup.alpha < 0.5f ? 1f : 0f;
+	}
+
+	private IEnumerator ShowMultipleMessages(BossDialogue dialogue)
+	{
+		// yield return new WaitForSeconds(.3f);
+		foreach (DialogueSection section in dialogue.sections)
+		{
+			foreach (string line in section.leadupLines)
+			{
+				ShowMessage(line);
+				int characterCount = line.Length;
+				yield return new WaitForSeconds(characterCount * 0.08f);
+			}
+
+			for (int i = 0; i < section.choices.Length; i++)
+			{
+				DialogueChoice choice = section.choices[i];
+				ShowMessage(choice.choice, true, i);
+				yield return new WaitForSeconds(0.3f);
+			}
+
+			yield return new WaitUntil(() => isChoiceMade);
+
+			foreach (string line in section.choices[choiceIndex].responseLines)
+			{
+				ShowMessage(line);
+				int characterCount = line.Length;
+				yield return new WaitForSeconds(characterCount * 0.08f);
+			}
+
+			isChoiceMade = false;
+			choiceIndex = -1;
+		}
+	}
+
+	private void ChoiceMade(int index)
+	{
+		Debug.Log("Choice made: " + index);
+		choiceIndex = index;
+
+		foreach (Comment comment in activeChoices)
+		{
+			comment.SetClickableChoice(false);
+		}
+
+		isChoiceMade = true;
 	}
 }

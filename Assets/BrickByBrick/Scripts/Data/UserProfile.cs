@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "UserProfile", menuName = "Scriptable Objects/UserProfile")]
-public class UserProfile : ScriptableObject
+public class DialogueTree : ScriptableObject
 {
     public Sprite profilePic;
     public string userName;

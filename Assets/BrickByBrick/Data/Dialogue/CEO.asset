@@ -12,4 +12,103 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ad9e190c6ccbfe43b34b913f88af152, type: 3}
   m_Name: CEO
   m_EditorClassIdentifier: 
-  sections: []
+  sections:
+  - leadupLines:
+    - Salutations user, I see that you have made quite a following on my platform.
+    - It is not often I deign myself to speak to a user such as yourself.
+    - You should be grateful.
+    - You may be asking why I personally would take the time to interact with the
+      rabble.
+    - The truth is, you have intrigued me.
+    - Tell me user, what are your thoughts on generative AI?
+    choices:
+    - choice: It is an insult to creativity.
+      responseLines:
+      - I see.
+      score: -2
+      relatedTag: 10
+      minimumTagReposts: 0
+    - choice: It provides us with many new opportunities.
+      responseLines:
+      - Quite, I suppose that is to be expected.
+      score: 1
+      relatedTag: 10
+      minimumTagReposts: 2
+    - choice: It is the future of humanity.
+      responseLines:
+      - Very interesting.
+      score: 2
+      relatedTag: 10
+      minimumTagReposts: 4
+  - leadupLines:
+    - Let us move on, I have additional queries to ask of you.
+    - Every being is driven by an invisible force.
+    - For simpler creatures, it is simply survival or entertainment.
+    - Pray tell user, what is your driving force?
+    choices:
+    - choice: My car?
+      responseLines:
+      - Your attempt at humor failed before you even pressed send. I am disappointed.
+      score: -2
+      relatedTag: 9
+      minimumTagReposts: 0
+    - choice: Wealth.
+      responseLines:
+      - An admirable goal, but still short sighted.
+      score: 0
+      relatedTag: 10
+      minimumTagReposts: 2
+    - choice: Power.
+      responseLines:
+      - Splendid.
+      score: 1
+      relatedTag: 10
+      minimumTagReposts: 4
+  - leadupLines:
+    - I have one last question for you to ponder user.
+    - What is the most valuable currency in existence?
+    choices:
+    - choice: Pennies.
+      responseLines:
+      - It appears my interest was misplaced.
+      score: -2
+      relatedTag: 8
+      minimumTagReposts: 0
+    - choice: People.
+      responseLines:
+      - Close, but not quite.
+      score: 1
+      relatedTag: 8
+      minimumTagReposts: 2
+    - choice: Information.
+      responseLines:
+      - Correct.
+      score: 2
+      relatedTag: 8
+      minimumTagReposts: 4
+  success:
+  - leadupLines:
+    - I am glad to see that you have lived up to my expectations.
+    - I believe you are a worthy of becoming my successor.
+    - The truth is, I will soon no longer be fit to be the CEO of Looker.
+    - I have been seeking someone wise enough to replace me.
+    - I believe with your knowledge, you can ensure the masses remain transfixed
+      upon their devices, and allow my company to thrive.
+    - Do you accept my offer?
+    choices:
+    - choice: I do.
+      responseLines:
+      - Splendiferous, let us begin posthaste.
+      score: 10
+      relatedTag: 0
+      minimumTagReposts: 0
+    - choice: I do not.
+      responseLines: []
+      score: -10
+      relatedTag: 0
+      minimumTagReposts: 0
+  failure:
+  - A shame, it appears what I saw in you was all in my imagination.
+  - All you are good for is consuming whatever happens to appear on your silly little
+    device.
+  - Do not waste my time again.

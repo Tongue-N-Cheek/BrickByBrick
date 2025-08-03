@@ -149,6 +149,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 04b25d3313d6d2c42ab8fb843391a24b, type: 2}
   bossPosts:
   - {fileID: 11400000, guid: 3aaa034ae75a4da499fd89246e4ac720, type: 2}
+  bossDialogues:
+  - {fileID: 11400000, guid: 65e17fa3c4f4cb743b523e5162dd67d0, type: 2}
   <GameState>k__BackingField: 0
   mixer: {fileID: 24100000, guid: 390de776aad8e4949940057bd6ce6574, type: 2}
 --- !u!82 &150850019146344196

@@ -4,18 +4,20 @@ using System;
 [CreateAssetMenu(fileName = "Post", menuName = "Scriptable Objects/Post")]
 public class Post : ScriptableObject
 {
-    public UserProfile userProfile;
+    public DialogueTree userProfile;
     public Tags[] postTags;
     [Multiline] public string description;
     public Sprite postImage;
     public Commenter[] commenters;
+    public int sanityChange;
     public bool pausesTime;
+    public bool isBossPost;
 }
 
 [Serializable]
 public struct Commenter
 {
-    public UserProfile commentingUser;
+    public DialogueTree commentingUser;
     public string comment;
 }
 
