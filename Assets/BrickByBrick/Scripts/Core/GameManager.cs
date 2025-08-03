@@ -4,6 +4,8 @@ using System.Collections;
 using UnityEngine.UI;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEngine.InputSystem.Interactions;
+
 
 #if UNITY_EDITOR
 using UnityEditor;
@@ -35,6 +37,7 @@ public class GameManager : MonoBehaviour
     private Coroutine timerCoroutine;
     private Dictionary<Tags, int> repostedTags = new();
     private bool isBossPost = false;
+    private int bossScore = 0;
 
     public void Awake()
     {
@@ -169,11 +172,29 @@ public class GameManager : MonoBehaviour
         // TODO: Unhide comments UI
     }
 
+    public void ChangeScore(int scoreChange) => bossScore += scoreChange;
+
+    public bool WonAgainstBoss() => bossStage switch
+    {
+        BossStage.ExGirlfriend => bossScore >= 0,
+        BossStage.CryptoBro => bossScore >= 0,
+        BossStage.CEO => bossScore >= 4,
+        _ => false,
+    };
+
     public void AdvanceStage()
     {
-        if (bossStage == BossStage.CEO) throw new System.Exception("End of game");
+        if (bossStage != BossStage.Tutorial && !WonAgainstBoss())
+        {
+            // TODO: fail
+            throw new System.Exception("Failed against boss");
+        }
+
+        if (bossStage == BossStage.CEO) throw new System.Exception("game won!");
         bossStage++;
+        bossScore = 0;
         repostedTags.Clear();
+        postConstructor.EnableButtons();
 
         List<Post> posts = Algorithm.GetPosts(bossStage);
         foreach (Post post in posts)
@@ -182,6 +203,8 @@ public class GameManager : MonoBehaviour
         }
         postConstructor.BuildPost(bossPosts[0]);
     }
+
+    public bool RepostedMinimum(Tags tag, int minimumReposts) => repostedTags[tag] >= minimumReposts;
 
     private void Init()
     {

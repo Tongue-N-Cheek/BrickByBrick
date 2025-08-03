@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
 public class MessagesPanel : MonoBehaviour
@@ -107,11 +106,12 @@ public class MessagesPanel : MonoBehaviour
 			for (int i = 0; i < section.choices.Length; i++)
 			{
 				DialogueChoice choice = section.choices[i];
+				if (!GameManager.Instance.RepostedMinimum(choice.relatedTag, choice.minimumTagReposts)) continue;
 				ShowMessage(choice.choice, true, i);
 				yield return new WaitForSeconds(0.3f);
 			}
 
-			yield return new WaitUntil(() => isChoiceMade);
+			if (section.choices.Length > 0) yield return new WaitUntil(() => isChoiceMade);
 
 			foreach (string line in section.choices[choiceIndex].responseLines)
 			{
@@ -123,9 +123,58 @@ public class MessagesPanel : MonoBehaviour
 			isChoiceMade = false;
 			choiceIndex = -1;
 		}
+
+		bool wonAgainstBoss = GameManager.Instance.WonAgainstBoss();
+
+		if (wonAgainstBoss)
+		{
+			foreach (DialogueSection section in dialogue.success)
+			{
+				foreach (string line in section.leadupLines)
+				{
+					ShowMessage(line);
+					int characterCount = line.Length;
+					yield return new WaitForSeconds(characterCount * 0.08f);
+				}
+
+				for (int i = 0; i < section.choices.Length; i++)
+				{
+					DialogueChoice choice = section.choices[i];
+					ShowMessage(choice.choice, true, i);
+					yield return new WaitForSeconds(0.3f);
+				}
+
+				if (section.choices.Length <= 0) continue;
+
+				yield return new WaitUntil(() => isChoiceMade);
+
+				foreach (string line in section.choices[choiceIndex].responseLines)
+				{
+					ShowMessage(line);
+					int characterCount = line.Length;
+					yield return new WaitForSeconds(characterCount * 0.08f);
+				}
+
+				isChoiceMade = false;
+				choiceIndex = -1;
+			}
+		}
+		else
+		{
+			foreach (string line in dialogue.failure)
+			{
+				ShowMessage(line);
+				int characterCount = line.Length;
+				yield return new WaitForSeconds(characterCount * 0.08f);
+			}
+		}
+
+		yield return new WaitForSeconds(1f);
+		HidePanel();
+		GameManager.Instance.AdvanceStage();
 	}
 
-	private void ChoiceMade(int index)
+	public void ChoiceMade(int index)
 	{
 		Debug.Log("Choice made: " + index);
 		choiceIndex = index;
