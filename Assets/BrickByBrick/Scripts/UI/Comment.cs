@@ -1,11 +1,12 @@
 using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public delegate void OnCommentClicked(int optionIndex);
 
-public class Comment : MonoBehaviour
+public class Comment : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
 	public int OptionIndex { get; set; } = -1;
 	public event OnCommentClicked Clicked;
@@ -70,6 +71,18 @@ public class Comment : MonoBehaviour
 		SetArrow(arrowSide);
 	}
 #endif
+
+	public void OnPointerEnter(PointerEventData eventData)
+	{
+		if (!isClickableChoice) return;
+		SetArrow(CommentArrow.Right);
+	}
+
+	public void OnPointerExit(PointerEventData eventData)
+	{
+		if (!isClickableChoice) return;
+		SetArrow(CommentArrow.None);
+	}
 
 	public void SetText(string text) => this.text.text = text;
 

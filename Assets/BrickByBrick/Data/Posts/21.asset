@@ -14,9 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   userProfile: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
   postTags: 01000000
-  description: 21 Astrology
+  description: Kings/Queens <3
   postImage: {fileID: -6400021916256205596, guid: b0601d5a615aaf145ba59114c5cd1481, type: 3}
-  commenters: []
+  commenters:
+  - commentingUser: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
+    comment: summer bebes!
+  - commentingUser: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
+    comment: honestly so self centered
   sanityChange: 1
   pausesTime: 0
   isBossPost: 0

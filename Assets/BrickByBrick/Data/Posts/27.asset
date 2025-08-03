@@ -13,10 +13,14 @@ MonoBehaviour:
   m_Name: 27
   m_EditorClassIdentifier: 
   userProfile: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
-  postTags: 01000000
-  description: 27 Astrology
+  postTags: 010000000400000009000000
+  description: True queeens wear their sign proud.
   postImage: {fileID: -8106634966825583902, guid: 1689ec0dd2f54e141bb2dfbf386a20ba, type: 3}
-  commenters: []
+  commenters:
+  - commentingUser: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
+    comment: ur aquarius necklace is so cute! whered u get it?
+  - commentingUser: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
+    comment: girlboss<3
   sanityChange: 3
   pausesTime: 0
   isBossPost: 0

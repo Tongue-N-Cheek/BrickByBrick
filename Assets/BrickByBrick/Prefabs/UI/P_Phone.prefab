@@ -592,6 +592,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   userNameDatabase: {fileID: 11400000, guid: 49ca2eaff8522cc4cbd68fa3e0df7683, type: 2}
+  profilePicDatabase: {fileID: 11400000, guid: 434b67c978b70b04f8830debe1f45311, type: 2}
   postPrefab: {fileID: 2488204681107578991, guid: 701e020567a41634ebc2b8d02e4e07ca, type: 3}
   postOrigin: {x: 6, y: -16}
   postSpacing: 604.64
@@ -1052,6 +1053,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 8030405770815177685}
   notificationImage: {fileID: 4798881344310422048}
+  notificationSound: {fileID: 0}
 --- !u!114 &6343927267518029888
 MonoBehaviour:
   m_ObjectHideFlags: 0

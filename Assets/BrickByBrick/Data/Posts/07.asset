@@ -14,9 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   userProfile: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
   postTags: 030000000a0000000b000000
-  description: 07 Cat
+  description: AI generated ad for a cat food company. There is a cat with too many
+    limbs and two faces eating cat food. Text is illegible.
   postImage: {fileID: 1583092943054279720, guid: b9bd53fdd1cfe49498b044c82f671fd4, type: 3}
-  commenters: []
+  commenters:
+  - commentingUser: {fileID: 11400000, guid: 2370ed06dc6662f42a780733015493b8, type: 2}
+    comment: This is my favorite brand. I luv luv luv their stuff.
+  - commentingUser: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
+    comment: I will buy now. Good deal!
+  - commentingUser: {fileID: 11400000, guid: 0caefd796bea033419400da1ad515707, type: 2}
+    comment: Third leg?
   sanityChange: -1
   pausesTime: 0
   isBossPost: 0

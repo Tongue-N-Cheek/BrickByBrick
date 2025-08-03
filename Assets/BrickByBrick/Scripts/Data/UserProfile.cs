@@ -9,4 +9,11 @@ public class UserProfile : ScriptableObject
     public int followingCount;
     [Multiline] public string profileDescription;
 
+    public string GetUserName() => userName == "Random"
+        ? PostConstructor.UserNameDatabase.GetRandomUserName()
+        : userName;
+
+    public Sprite GetProfilePic() => userName == "Random"
+        ? PostConstructor.ProfilePicDatabase.GetRandomProfilePic()
+        : profilePic;
 }

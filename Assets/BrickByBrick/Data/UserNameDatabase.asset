@@ -12,12 +12,45 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 342953ff36ec0ae48a6764fae5956bd5, type: 3}
   m_Name: UserNameDatabase
   m_EditorClassIdentifier: 
-  userNamePrefixes:
-  - prefix1_
-  - prefix2_
-  userNameAffixes:
-  - affix1_
-  - affix2_
-  userNameSuffixes:
-  - suffix1
-  - suffix2
+  names:
+  - CheesyNerd27
+  - Bedrockbreaker
+  - HayleeHazel
+  - Boximus_Mannius
+  - ZachNationStanz
+  - ConglomerateCorp
+  - Jim@DaGym
+  - Anon
+  - ProHater
+  - RealAccountNotPaid
+  - JohnOnDaJohn
+  - alex_sayin
+  - missing_u
+  - d_esper_8
+  - wyreny
+  - l0rdofd4rkness
+  - nahavocado
+  - beefy_dan
+  - logan_lake
+  - mall_gourmet
+  - da_vinki
+  - skita
+  - wolf_news
+  - silver_mason
+  - vane_gurl
+  - aila_kugood
+  - burjill
+  - DailyCatVids
+  - the_wisdom_of_stars
+  - ibuhard_us
+  - john_politics
+  - highest_bidder
+  - bakeoven
+  - timmy_2
+  - sparkle_onnn
+  - rugpusher5
+  - the_meme_lord
+  - wutdadogdoin
+  - laughitoff
+  - the_tartist
+  - the_game_jammer
