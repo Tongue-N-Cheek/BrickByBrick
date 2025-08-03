@@ -15,7 +15,7 @@ MonoBehaviour:
   userProfile: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
   postTags: 0a000000
   description: 73 AI
-  postImage: {fileID: 21300000, guid: 65eccc48788f4a84da4ab190c4ae82e8, type: 3}
+  postImage: {fileID: 8150691947036538361, guid: a94febc80ad882947a829aba115dfe27, type: 3}
   commenters: []
   sanityChange: -1
   pausesTime: 0

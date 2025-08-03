@@ -15,7 +15,7 @@ MonoBehaviour:
   userProfile: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
   postTags: 0c000000
   description: 91 Brainrot
-  postImage: {fileID: 21300000, guid: 65eccc48788f4a84da4ab190c4ae82e8, type: 3}
+  postImage: {fileID: -414975301581219949, guid: 5395408e5f254ac4e8ee84d3a167bc92, type: 3}
   commenters: []
   sanityChange: -1
   pausesTime: 0
