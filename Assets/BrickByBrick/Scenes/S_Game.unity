@@ -810,21 +810,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 956419506}
     - target: {fileID: 6918368513911343370, guid: 895e064855e75290eada2d143a399d3c, type: 3}
-      propertyPath: bossDialogues.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6918368513911343370, guid: 895e064855e75290eada2d143a399d3c, type: 3}
       propertyPath: <GameState>k__BackingField
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 6918368513911343370, guid: 895e064855e75290eada2d143a399d3c, type: 3}
-      propertyPath: 'bossDialogues.Array.data[0]'
-      value: 
-      objectReference: {fileID: 11400000, guid: 513f3b011b21bdc45b3a8fd636b0d38b, type: 2}
-    - target: {fileID: 6918368513911343370, guid: 895e064855e75290eada2d143a399d3c, type: 3}
-      propertyPath: 'bossDialogues.Array.data[1]'
-      value: 
-      objectReference: {fileID: 11400000, guid: 65e17fa3c4f4cb743b523e5162dd67d0, type: 2}
     - target: {fileID: 7694694837072445978, guid: 895e064855e75290eada2d143a399d3c, type: 3}
       propertyPath: m_Name
       value: P_GameManager

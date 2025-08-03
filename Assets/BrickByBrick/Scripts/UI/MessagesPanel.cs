@@ -157,6 +157,8 @@ public class MessagesPanel : MonoBehaviour
 
 				yield return new WaitUntil(() => isChoiceMade);
 
+				GameManager.Instance.ChangeScore(section.choices[choiceIndex].score);
+
 				foreach (string line in section.choices[choiceIndex].responseLines)
 				{
 					ShowMessage(line);

@@ -12,4 +12,117 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ad9e190c6ccbfe43b34b913f88af152, type: 3}
   m_Name: CryptoBro
   m_EditorClassIdentifier: 
-  sections: []
+  sections:
+  - leadupLines:
+    - Yooooooooooooo bro
+    - What is up my fellow crypto bro
+    - I see that you have been looking at a lot of posts similar to mine bro
+    - "Not to brag or anything bro, but i\u2019ve posted quite a few photos recently"
+    - What do you think of them bro?
+    choices:
+    - choice: Bro, they're fantastic
+      responseLines:
+      - Thanks bro
+      score: 2
+      relatedTag: 7
+      minimumTagReposts: 3
+    - choice: They look good bro
+      responseLines:
+      - Appreciate the feedback bro
+      score: 1
+      relatedTag: 7
+      minimumTagReposts: 2
+    - choice: eh, they're alright bro
+      responseLines:
+      - thanks for the honesty bro
+      score: -1
+      relatedTag: 7
+      minimumTagReposts: 0
+  - leadupLines:
+    - Anyway bro, its not very often that I talk to someone with actual intelligence
+    - So bro, I'm kinda curious, what do you do for fun?
+    choices:
+    - choice: Bro, they're fantastic
+      responseLines:
+      - Nice bro, same here
+      score: 1
+      relatedTag: 5
+      minimumTagReposts: 3
+    - choice: Market Research
+      responseLines:
+      - Thats cool bro, I respect the dedication
+      score: 0
+      relatedTag: 5
+      minimumTagReposts: 1
+    - choice: Gaming
+      responseLines:
+      - Gotcha bro, thats neat
+      score: -1
+      relatedTag: 5
+      minimumTagReposts: 0
+  - leadupLines:
+    - Not to ruin the conversation or anything bro, but
+    - Have you invested in my brand new Zachoin yet bro?
+    choices:
+    - choice: Of course bro
+      responseLines:
+      - "Awesomesauce bro, you\u2019ve taken the correct course of Zachtion for sure"
+      score: 2
+      relatedTag: 6
+      minimumTagReposts: 3
+    - choice: Not yet bro
+      responseLines:
+      - "That\u2019s alright bro, take your time"
+      score: -1
+      relatedTag: 6
+      minimumTagReposts: 1
+    - choice: "ehh, I don\u2019t know bro, seems kinda fishy"
+      responseLines:
+      - "nahh bro, trust me it\u2019ll be the best financial decision of your life"
+      score: -2
+      relatedTag: 6
+      minimumTagReposts: 0
+  success:
+  - leadupLines:
+    - 'I appreciate the talk bro '
+    - Let me know if you have any questions about Zachoin bro
+    choices:
+    - choice: Actually bro, I have a business proposition
+      responseLines:
+      - What did you have in mind bro?
+      score: 0
+      relatedTag: 0
+      minimumTagReposts: 0
+  - leadupLines: []
+    choices:
+    - choice: "Bro, I can improve Zachoin even further, but I\u2019ll need access
+        to your account"
+      responseLines:
+      - Bro, that seems kinda fishy, what for?
+      score: 0
+      relatedTag: 0
+      minimumTagReposts: 0
+  - leadupLines: []
+    choices:
+    - choice: Trust me bro
+      responseLines:
+      - Aight bro, I'll trust you
+      - zachcoin@zachnation.com, Zachword1234!
+      score: 0
+      relatedTag: 0
+      minimumTagReposts: 0
+  - leadupLines:
+    - ...
+    - Bro, wait a minute...
+    - Wait bro, dont do this, you're ruining my crypto enterprise
+    choices:
+    - choice: Bag secured
+      responseLines: []
+      score: 0
+      relatedTag: 0
+      minimumTagReposts: 0
+  failure:
+  - Aight bro, Imma keep it real with you
+  - "I\u2019m straight up not vibing with this conversation bro"
+  - I also have to attend a private party on The Zacht soon bro
+  - So I'll catch ya later bro.

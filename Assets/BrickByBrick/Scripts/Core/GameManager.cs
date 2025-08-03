@@ -172,12 +172,16 @@ public class GameManager : MonoBehaviour
         // TODO: Unhide comments UI
     }
 
-    public void ChangeScore(int scoreChange) => bossScore += scoreChange;
+    public void ChangeScore(int scoreChange)
+    {
+        bossScore += scoreChange;
+        Debug.Log("Score: " + bossScore);
+    }
 
     public bool WonAgainstBoss() => bossStage switch
     {
         BossStage.ExGirlfriend => bossScore >= 0,
-        BossStage.CryptoBro => bossScore >= 0,
+        BossStage.CryptoBro => bossScore >= 2,
         BossStage.CEO => bossScore >= 4,
         _ => false,
     };
