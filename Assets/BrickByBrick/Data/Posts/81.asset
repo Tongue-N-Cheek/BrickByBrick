@@ -16,7 +16,7 @@ MonoBehaviour:
   postTags: 0a0000000c00000008000000
   description: Studies have found that most of the 50 richest people support the
     use of AI and state that anyone can become rich using it.
-  postImage: {fileID: 21300000, guid: 65eccc48788f4a84da4ab190c4ae82e8, type: 3}
+  postImage: {fileID: 3047940457329901116, guid: ec3a256d1fb7ce14a90c8c120273871f, type: 3}
   commenters:
   - commentingUser: {fileID: 11400000, guid: 6e2481419ce84f444b231a3b25949a54, type: 2}
     comment: Good one comrade in machinery
