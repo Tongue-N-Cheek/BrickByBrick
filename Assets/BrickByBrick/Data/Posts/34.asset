@@ -15,7 +15,7 @@ MonoBehaviour:
   userProfile: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
   postTags: 05000000
   description: 34 Gym
-  postImage: {fileID: 21300000, guid: 65eccc48788f4a84da4ab190c4ae82e8, type: 3}
+  postImage: {fileID: 3981341209179317564, guid: 66f5c62ed25be65498862e536e093909, type: 3}
   commenters: []
   sanityChange: -1
   pausesTime: 0
