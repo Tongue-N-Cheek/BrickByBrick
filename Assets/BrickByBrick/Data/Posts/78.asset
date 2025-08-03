@@ -12,11 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17eef46343b5f9641bc27de74b3a8443, type: 3}
   m_Name: 78
   m_EditorClassIdentifier: 
-  userProfile: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
-  postTags: 0a000000
+  userProfile: {fileID: 11400000, guid: 5f062db241ed358408e3a04fe8fe5278, type: 2}
+  postTags: 0a00000006000000
   description: 78 AI
   postImage: {fileID: 2978744177805515716, guid: 9ed689dbe38ec414d94bcae0123b2821, type: 3}
-  commenters: []
+  commenters:
+  - commentingUser: {fileID: 11400000, guid: 0cbf1063b23d7fe4dbbe712427e00e48, type: 2}
+    comment: Sick pic bro
+  - commentingUser: {fileID: 11400000, guid: afa6a3298e3794d49baafa0e1385249b, type: 2}
+    comment: "I\u2019m invested already"
+  - commentingUser: {fileID: 11400000, guid: ca80c3934f7f2af4498119764a33be6f, type: 2}
+    comment: I have had enough of this trash AI filling my feed
   sanityChange: -2
   pausesTime: 0
   isBossPost: 0

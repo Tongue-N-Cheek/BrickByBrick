@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 94
   m_EditorClassIdentifier: 
   userProfile: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
-  postTags: 0c000000
+  postTags: 0c00000005000000
   description: 94 Brainrot
   postImage: {fileID: -6704124904687267290, guid: 96c88f5ec52f81a4694dcda889167a22, type: 3}
   commenters: []

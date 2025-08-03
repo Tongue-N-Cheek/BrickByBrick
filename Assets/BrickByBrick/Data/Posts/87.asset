@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17eef46343b5f9641bc27de74b3a8443, type: 3}
   m_Name: 87
   m_EditorClassIdentifier: 
-  userProfile: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
-  postTags: 0b000000
+  userProfile: {fileID: 11400000, guid: 0cbf1063b23d7fe4dbbe712427e00e48, type: 2}
+  postTags: 0b00000006000000
   description: 87 Advertisement
   postImage: {fileID: 5256618254156315775, guid: e98f26a71d741a84fa0aeb99bb323760, type: 3}
   commenters: []

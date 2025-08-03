@@ -16,7 +16,13 @@ MonoBehaviour:
   postTags: 0b000000
   description: 82 Advertisement
   postImage: {fileID: 1585682601964385751, guid: 787b4adbbf14aca4c98d8f5152fa01dd, type: 3}
-  commenters: []
+  commenters:
+  - commentingUser: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
+    comment: So much power, but no pupeteer
+  - commentingUser: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
+    comment: I can't get enough, literally
+  - commentingUser: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
+    comment: I might be addicted, but I just want more
   sanityChange: -1
   pausesTime: 0
   isBossPost: 0

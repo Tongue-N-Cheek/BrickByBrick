@@ -13,10 +13,16 @@ MonoBehaviour:
   m_Name: 76
   m_EditorClassIdentifier: 
   userProfile: {fileID: 11400000, guid: 01a24552771f1094b9680cec7a1494bc, type: 2}
-  postTags: 0a000000
+  postTags: 0a00000007000000
   description: 76 AI
   postImage: {fileID: -7561372317519875207, guid: 21b625f50f67ef345b32cbd96ebfe22a, type: 3}
-  commenters: []
+  commenters:
+  - commentingUser: {fileID: 11400000, guid: 5f062db241ed358408e3a04fe8fe5278, type: 2}
+    comment: Good work bro, you can use that new cash to buy more Zachoin
+  - commentingUser: {fileID: 11400000, guid: 6e2481419ce84f444b231a3b25949a54, type: 2}
+    comment: Congart
+  - commentingUser: {fileID: 11400000, guid: 6b67c2b0399f2ad4ab51a811ced38ea6, type: 2}
+    comment: "Congrats, but you don\u2019t need AI to celebrate"
   sanityChange: 0
   pausesTime: 0
   isBossPost: 0
